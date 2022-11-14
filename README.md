@@ -23,6 +23,33 @@
 
 ### *How to make a table?*
 
+```markdown
+<--! markdown -->
+|column_name1    |column_name2   |column_name3  |
+|:---------------|--------------:|:------------:|
+|right-justified | left-justified|  centered    |
+```
+`<!-- rendered-->`
+|column_name1    |column_name2   |column_name3  |
+|:---------------|--------------:|:------------:|
+|right-justified | left-justified|  centered    |
+
+
+### *How to make a linked image?*
+
+```markdown
+<!-- markdown -->
+<!-- to make a link -->
+[object](address)
+
+<!-- to make an image -->
+![text](address)
+
+<!-- combined them -->
+[![alternate text](
+```
+
+
 
 
 
