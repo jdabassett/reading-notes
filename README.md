@@ -1,4 +1,4 @@
-# **Reading Notes for 102d45**
+# **102d45: Reading Notes**
 
 *In this lesson we are learning how to use Markdown to make a website.*
   
@@ -55,11 +55,9 @@
 [![alternate text](https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png)](https://en.wikipedia.org/wiki/Rickrolling)
 
 
-
-
-
-
-
+---
+---
 ## Things I want to know more about.
 * How to make separate pages with a table of contents.
 * How to add classes and ids to elements in markdown.
+* :+1:
