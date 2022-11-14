@@ -2,7 +2,8 @@
 
 *In this lesson we are learning how to use Markdown to make a website.*
   
-
+---
+---
 ## **Below are some common questions and markdown solutions.**
 
 ### *How to make a header?*
@@ -20,7 +21,7 @@
 ### header3
 #### header4
 
-
+---
 ### *How to make a table?*
 
 ```markdown
@@ -34,7 +35,7 @@
 |:---------------|--------------:|:------------:|
 |right-justified | left-justified|  centered    |
 
-
+---
 ### *How to make a linked image?*
 
 ```markdown
@@ -50,6 +51,7 @@
 ```
 
 `<!-- rendered -->`
+
 [![alternate text](https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png)](https://en.wikipedia.org/wiki/Rickrolling)
 
 
