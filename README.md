@@ -46,8 +46,11 @@
 ![text](address)
 
 <!-- combined them -->
-[![alternate text](
+[![alternate text]('https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png')]('https://en.wikipedia.org/wiki/Rickrolling')
 ```
+
+`<!-- rendered -->`
+[![alternate text](https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png)](https://en.wikipedia.org/wiki/Rickrolling)
 
 
 
