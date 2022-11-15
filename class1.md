@@ -46,4 +46,4 @@
 ## Things I want to know more about.
 * How to make separate pages with a table of contents.
 * How to add classes and ids to elements in markdown.
-* :+1:
+* 👍
