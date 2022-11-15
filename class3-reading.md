@@ -47,7 +47,7 @@ ___
 #commiting changes to repository
  
 #3->1
->git clone "address" 
+>git clone "repository-address" newNameIfYouWant
 #to make clone of whole respository
 >git restore --stored=id file.txt
 #restore deleted file from repository
@@ -64,6 +64,12 @@ ___
 #user.email=example@email.com
 #core.editor=code--wait
 #init.defaultbranch=main
+```
+___
+**Get help with git terminal command?**
+```
+>git log --help
+#will return documentation about log command.
 ```
 ___
 ___
