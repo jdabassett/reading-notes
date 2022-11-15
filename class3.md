@@ -45,6 +45,7 @@ ___
 #2->3
 >git commit -m "comment about changes"
 #commiting changes to repository
+>git push origin main
  
 #3->1
 >git clone "repository-address" newNameIfYouWant
