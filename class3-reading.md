@@ -75,14 +75,18 @@ ___
 **Check the git status?**
 ```
 >git status
+#On branch main
+#Your branch is up to date with 'origin/main'.
+#nothing to commit, working tree clean
 ```
-**?**
+**Check address of respository?**
 ```
-
+>git remote -v
+#origin	https://github.com/jdabassett/102d45-second-website.git (fetch)
+#origin	https://github.com/jdabassett/102d45-second-website.git (push)
 ```
 ___
 ___
 ___
 ## Things I want to know more about.
-1. 
-1. 
+1. What GitHub branches enable?
