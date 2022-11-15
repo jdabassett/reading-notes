@@ -1,6 +1,9 @@
-# **102d45: Reading Notes**
-
-*In this lesson we are learning how to use Markdown to make a website.*
+# Markdown Notes:
+---
+---
+---
+## Why is this important?
+Markdown is a simple way to 
   
 ---
 ---

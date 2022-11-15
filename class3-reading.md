@@ -1,4 +1,4 @@
-# Flash Cards: GitHub
+# Flashcards: GitHub
 ___
 ___
 ___
