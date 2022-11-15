@@ -1,4 +1,5 @@
-# Commandline Flashcards
+# Text editor, Commandline, and File Storage Flash Cards
+Just downloaded a lot of tools, including a text editor, through our commandline and now is a good time to understand more about how all these tools integrate into a good web development environment.
 
 ___
 ## Flashcard Format
@@ -24,4 +25,24 @@ No. HTML and CSS text should never be bolded, italicized, or underline.
 **What the difference between a text editor and an IDE?**
 ```
 An IDE is a text editor, file manager, compiler, and debugger. 
+```
+
+**Why might someone have multiple command line terminals open?**
+```
+You can utilize them separately based on the type of task. Data search, managing files, running programs, and so forth...
+```
+
+**What is a shell and how can you check for it in the terminal?**
+```
+Is a user interface for access to an operating systems services. 
+
+>echo $SHELL
+/bin/zsh
+```
+
+**What is the difference between an absolute and relative path?**
+```
+Absolute paths locate a directory in relation to the root directory. IE /file1/subfile1/folder
+
+Relative paths locate a directory in relation to current location. IE file1
 ```
