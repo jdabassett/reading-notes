@@ -1,4 +1,5 @@
-# Text editor, Commandline, and File Storage Flash Cards
+# Flashcards: Text editor, Commandline, and File Storage
+
 Just downloaded a lot of tools, including a text editor, through our commandline and now is a good time to understand more about how all these tools integrate into a good web development environment.
 
 ___
