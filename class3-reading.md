@@ -37,19 +37,21 @@ DVCS is more resiliant to failure than CVC. GitHub is a DVCS.
 
 **With these three locations in mind what is the terminal command to move files between them?**
 ```
-1->2
+#1->2
 >git add file.txt
+#called adding files to stagine area
 
-2->3
+#2->3
 >git commit -m "comment about changes"
+#commiting changes to repository
  
-3->1
+#3->1
 >git clone "address" 
 #to make clone of whole respository
 >git restore --stored=id file.txt
 #restore deleted file from repository
 
-2->1
+#2->1
 >git restore--staged file.txt
 #retore deleted file from staging
 ```
@@ -58,9 +60,10 @@ DVCS is more resiliant to failure than CVC. GitHub is a DVCS.
 **Check your config settings?**
 ```
 >git config --list
-user.name=John Doe
-user.email=example@email.com
-????????
+#user.name=John Doe
+#user.email=example@email.com
+#core.editor=code--wait
+#init.defaultbranch=main
 ```
 
 
