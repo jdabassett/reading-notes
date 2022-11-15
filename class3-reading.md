@@ -1,5 +1,5 @@
 # Flash Cards: GitHub
-
+___
 ___
 ___
 
@@ -7,6 +7,7 @@ ___
 We will be using GitHub to organize the files we create while we are web developing. Being ambitous students, we will be making lots of mistakes. Like the late great David Rakoff said, "You really need to pay attention to each step, or you will end up in the soup."
 
 GitHub will help us manage and restore files as we try to keep our projects 'out of the soup'.
+___
 ___
 ## Flashcards
 
@@ -16,7 +17,7 @@ A system that keeps previous versions of file recorded and accessible for restor
 
 "When you done f&^%ed-up do you have anything to fall back on?"
 ```
-
+___
 **What is the difference between a CVC and DVC version control system?**
 ```
 A Centralized Version Control System(CVS) is centralized at one location.
@@ -25,7 +26,7 @@ DVCS is more resiliant to failure than CVC. GitHub is a DVCS.
 
 "Although being so cork-fork special, you might be the exception to the rule."
 ```
-
+___
 **What are the three locations a file/file-version can reside?**
 ```
 1)Local Working Directory
@@ -34,7 +35,7 @@ DVCS is more resiliant to failure than CVC. GitHub is a DVCS.
 
 "Don't get lost on your way to Grandma's house now, this isn't that hard to remember."
 ```
-
+___
 **With these three locations in mind what is the terminal command to move files between them?**
 ```
 #1->2
@@ -55,8 +56,7 @@ DVCS is more resiliant to failure than CVC. GitHub is a DVCS.
 >git restore--staged file.txt
 #retore deleted file from staging
 ```
-
-
+___
 **Check your config settings?**
 ```
 >git config --list
@@ -65,8 +65,7 @@ DVCS is more resiliant to failure than CVC. GitHub is a DVCS.
 #core.editor=code--wait
 #init.defaultbranch=main
 ```
-
-
+___
 ___
 ___
 ## Things I want to know more about.
