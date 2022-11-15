@@ -1,4 +1,4 @@
-# Git Guide Flash Cards
+# Flash Cards: GitHub
 
 ___
 ___
