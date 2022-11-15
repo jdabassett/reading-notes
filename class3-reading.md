@@ -52,10 +52,12 @@ ___
 #to make clone of whole respository
 >git restore --stored=id file.txt
 #restore deleted file from repository
+>git pull origin main
+#pull changed files
 
 #2->1
 >git restore--staged file.txt
-#retore deleted file from staging
+#restore deleted file from staging
 ```
 ___
 **Check your config settings?**
