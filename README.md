@@ -1,4 +1,8 @@
-# My definition of the Growth Mindset
+# Jacob Bassett's Code Fellow Notes
+ 
+---
+
+### My name is Jacob Bassett and I am a full-time software development student at Code Fellows.
 
 ___
 ___
@@ -40,8 +44,7 @@ Because lets be honest you don't just want to succeed but you also want to get t
 ___
 ___
 
-## Footer
-By the way my name is [Jacob Bassett](https://github.com/jdabassett). You can follow this link to my Github profile. 
+Follow this link to find my [Github](https://github.com/jdabassett). 
 
 
 
