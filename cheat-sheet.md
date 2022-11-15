@@ -57,3 +57,10 @@ The 2-4 characters after a file that denote its type. IE file.txt is a text file
 Use an escape.  IE >cd Grandmas\ Christmas\ Photos
 Use quotes.     IE >cd 'Grandmas Christmas Photos'
 ```
+
+___
+___
+## Things I want to know more about.
+1. How to substitute pip with Homebrew?
+1. How to commit to Github from the terminal?
+
