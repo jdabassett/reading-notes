@@ -46,3 +46,14 @@ Absolute paths locate a directory in relation to the root directory. IE /file1/s
 
 Relative paths locate a directory in relation to current location. IE file1
 ```
+
+**What is a file extension?**
+```
+The 2-4 characters after a file that denote its type. IE file.txt is a text file
+```
+
+**How to incorporate a space into a terminal command?**
+```
+Use an escape.  IE >cd Grandmas\ Christmas\ Photos
+Use quotes.     IE >cd 'Grandmas Christmas Photos'
+```
