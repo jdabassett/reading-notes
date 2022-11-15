@@ -71,6 +71,15 @@ ___
 >git log --help
 #will return documentation about log command.
 ```
+---
+**Check the git status?**
+```
+>git status
+```
+**?**
+```
+
+```
 ___
 ___
 ___
