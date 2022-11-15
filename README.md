@@ -37,6 +37,13 @@ I like to search through history for figures that overcame a similar challenge. 
 Because lets be honest you don't just want to succeed but you also want to get their with your family, friends, and health. :wink:
 
 
+___
+___
+
+## Footer
+By the way my name is [Jacob Bassett](https://github.com/jdabassett). You can follow this link to my Github profile. 
+
+
 
 
 
