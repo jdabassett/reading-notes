@@ -39,7 +39,19 @@ DVCS is more resiliant to failure than CVC. GitHub is a DVCS.
 ```
 1->2
 >git add file.txt
-??????
+
+2->3
+>git commit -m "comment about changes"
+ 
+3->1
+>git clone "address" 
+#to make clone of whole respository
+>git restore --stored=id file.txt
+#restore deleted file from repository
+
+2->1
+>git restore--staged file.txt
+#retore deleted file from staging
 ```
 
 
@@ -50,6 +62,8 @@ user.name=John Doe
 user.email=example@email.com
 ????????
 ```
+
+
 ___
 ___
 ## Things I want to know more about.
