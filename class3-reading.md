@@ -39,13 +39,16 @@ DVCS is more resiliant to failure than CVC. GitHub is a DVCS.
 ```
 1->2
 >git add file.txt
-
+??????
 ```
 
 
-**?**
+**Check your config settings?**
 ```
-
+>git config --list
+user.name=John Doe
+user.email=example@email.com
+????????
 ```
 ___
 ___
