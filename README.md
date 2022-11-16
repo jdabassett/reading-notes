@@ -1,53 +1,41 @@
-# Jacob Bassett's Code Fellow Notes
- 
+# Jacob Bassett's Code Fellows 102 and 201 Notes:
+___
+___
+___
+## **Who is this and how did you get my number?**
+
+This is Jacob Bassett and I'm not calling you. This is a webpage not a phonecall. Below you will find a table of contents to all my notes from my time at Code Fellows 102 and 201. You can hang up now.
+___
+## **Table of Contents**
+
+### **Code 102 Reading Notes**
+1. [Markdown](102/class1-reading.md)
+1. [Terminal and Text Editor](102/class2-reading.md)
+1. [GitHub](102/class3-reading.md)
+1. [TBD](102/class4.md)
+1. [TBD](102/class5.md)
+1. [TBD](102/class6.md)
+1. [TBD](102/class7.md)
+1. [TBD](102/class8.md)
+
+
+### **Code 201 Reading Notes**
+1. [TBD](201/class1.md)
+1. [TBD](201/class2.md)
+1. [TBD](201/class3.md)
+1. [TBD](201/class4.md)
+1. [TBD](201/class5.md)
+1. [TBD](201/class6.md)
+1. [TBD](201/class7.md)
+1. [TBD](201/class8.md)
+1. [TBD](201/class9.md)
+1. [TBD](201/class10.md)
+1. [TBD](201/class11.md)
+1. [TBD](201/class12.md)
+1. [TBD](201/class13.md)
+1. [TBD](201/class14.md)
+1. [TBD](201/class15.md)
+
 ---
-
-### My name is Jacob Bassett and I am a full-time software development student at Code Fellows.
-
-___
-___
-
-## To me the growth mindset boils down to two principles. 
-
-1. ***Proactively improve*** your craft by seek new information and methods. 
-1. ***Persist*** through obsticales. 
-
-___
-
-## When I get tired. When I start to doubt my ability to solve the problem in front of me and continue toward my goals.
-
-### First I repeat this phrase...
-
->"He who has a why to live can bear almost any how."
->>[Freidriech Neitche](https://en.wikipedia.org/wiki/Friedrich_Nietzsche)
-
-This often expands my focus from the mere problem in front of me to encapsulate my *"whys"* providing context for my struggles. 
-
-### Second...
-
-Next I will look into my box of [mantras](https://lumitory.com/blogs/lumitory-blog/3-steps-to-create-your-own-personal-mantra) that fit the current struggles.
-
-Example:
-```
-When I am doubting my capacity to build any of these amazing and complex applications I come across on the web. I find comfort repeating this mantra. "Currently I am shitty developer, I am working to become a competent one."  This often works in times of self doubt.
-
-Mantras must be honest to be effective. Do some soul searching first.
-```
-
-### Third...
-
-I like to search through history for figures that overcame a similar challenge. Seeing others succeed can not only help clarify your goals but provide a model for a healthy way to approach your similar struggles. 
-
-Because lets be honest you don't just want to succeed but you also want to get their with your family, friends, and health. :wink:
-
-
-___
-___
-
-Follow this link to find my [Github](https://github.com/jdabassett). 
-
-
-
-
-
-
+---
+---

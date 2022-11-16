@@ -1,10 +1,10 @@
-# Markdown Notes:
+# Notes: Markdown
 ---
 ---
 ---
-## Why is this important?
-Markdown is a simple way to 
-  
+## **Why is this important?**
+Markdown is a simple way to create primarily static web pages. Great place to start.
+
 ---
 ---
 ## **Below are some common questions and markdown solutions.**
@@ -40,10 +40,7 @@ Markdown is a simple way to
 ```
 
 `<!-- rendered -->`
-
 [![alternate text](https://upload.wikimedia.org/wikipedia/en/f/f7/RickRoll.png)](https://en.wikipedia.org/wiki/Rickrolling)
-
-
 ---
 ---
 ## Things I want to know more about.
