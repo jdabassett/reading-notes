@@ -12,7 +12,7 @@ ___
 1. [Markdown](102/class1-reading.md)
 1. [Terminal and Text Editor](102/class2-reading.md)
 1. [GitHub](102/class3-reading.md)
-1. [TBD](102/class4.md)
+1. [HTML](102/class4-reading.md)
 1. [TBD](102/class5.md)
 1. [TBD](102/class6.md)
 1. [TBD](102/class7.md)
