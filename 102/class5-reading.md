@@ -35,7 +35,7 @@ div {color:red;}
 .class1 {color:red;}
 
 /*div element with id of 'id1'*/
-#id1 {color.red;}
+#id1 {color:red;}
 
 /*css property=color,
   css value=red*/
