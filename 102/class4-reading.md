@@ -18,7 +18,7 @@ ___
 ```
 Is a simple sketch to prototype the design of a website.
 
-"There is no such thing as good writing, only good rewritting."-Robert Graves
+"There is no such thing as good writing, only good rewritting." - Robert Graves
 ```
 
 ___
