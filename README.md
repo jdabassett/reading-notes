@@ -14,7 +14,7 @@ ___
 1. [GitHub](102/class3-reading.md)
 1. [HTML](102/class4-reading.md)
 1. [CSS](102/class5-reading.md)
-1. [TBD](102/class6.md)
+1. [Javascript_Intro](102/class6-reading.md)
 1. [TBD](102/class7.md)
 1. [TBD](102/class8.md)
 
