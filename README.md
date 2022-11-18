@@ -16,7 +16,7 @@ ___
 1. [CSS](102/class5-reading.md)
 1. [Javascript_Intro](102/class6-reading.md)
 1. [Javascript_Variables-Functions](102/class7-reading.md)
-1. [TBD](102/class8.md)
+1. [Javascript_Iterables](102/class8-reading.md)
 
 
 ### **Code 201 Reading Notes**
