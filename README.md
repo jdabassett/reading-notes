@@ -20,7 +20,7 @@ ___
 
 
 ### **Code 201 Reading Notes**
-1. [TBD](201/class1.md)
+1. [How the Web Works](201/class1-reading.md)
 1. [TBD](201/class2.md)
 1. [TBD](201/class3.md)
 1. [TBD](201/class4.md)
