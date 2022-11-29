@@ -1,4 +1,6 @@
-# **Class-01 Reading Notes:**
+# **Class01 Reading Notes:**
+___
+___
 
 ## [**How the web works:**](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
 
@@ -153,6 +155,8 @@ Storing user data/input as variables and performing calculations with that data 
 Using the script tag to either contain JavaScript code itself or point to a separate 'script.js' file. You could also add it inline but don't!
 ```
 
+___
+___
 ## **Things I want to know more about:**
 1. How SEO is performed? 
 
