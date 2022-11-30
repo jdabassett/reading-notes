@@ -22,7 +22,7 @@ ___
 ### **Code 201 Reading Notes**
 1. [How the Web Works](201/class1-reading.md)
 1. [Basics of HTML, CSS, and JS](201/class2-reading.md)
-1. [TBD](201/class3.md)
+1. [HTML, CSS, JS](201/class3-reading.md)
 1. [TBD](201/class4.md)
 1. [TBD](201/class5.md)
 1. [TBD](201/class6.md)
