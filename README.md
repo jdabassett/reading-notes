@@ -24,7 +24,7 @@ ___
 1. [Basics of HTML, CSS, and JS](201/class2-reading.md)
 1. [HTML, CSS, JS](201/class3-reading.md)
 1. [Links, Functions, Layout](201/class4-reading.md)
-1. [TBD](201/class5.md)
+1. [Images, Color, Text](201/class5-reading.md)
 1. [TBD](201/class6.md)
 1. [TBD](201/class7.md)
 1. [TBD](201/class8.md)
