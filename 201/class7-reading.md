@@ -8,6 +8,7 @@
 * Explain why we need domain modeling?
 
 ```
+To construct a model of our problem that encapsulates our data, can be inherited, and modified to suit changes in our problem.
 ```
 
 ---
@@ -17,11 +18,15 @@
 * Why should tables not be used for page layout?
 
 ```
+They reduce accessibility for the visually impaired, they make code that is hard to maintain, and are not responsive.
 ```
 
 * List and describe 3 different semantic HTML elements used in an HTML tables.
 
 ```
+<tr> tags designate a row.
+<th> tags designate header elements.
+<td> tags designate cell contents.
 ```
 
 ---
@@ -31,11 +36,13 @@
 * What is a constructor and what are some advantages to using it?
 
 ```
+An empty object that can be populated with data when invoked. It is simpler to invoke that a object literal and allows for additions of endless function/method additions after invocation through the use of the prototype function.
 ```
 
 * How does the term this differ when used in an object literal versis when used in a constructor?
 
 ```
+For object literals the this keyword only refers to a function contained within the object. Where with a constructor the this keyword refers to the object itself.
 ```
 
 ---
@@ -45,6 +52,7 @@
 * Explain prototypes and inheritance via an analogy from your previous work experience.
 
 ```
+If something worked from the past grant application you can review the underlie blueprint and 'inherit' some of the structure and 'prototype'/methods into a new grant application.
 ```
 ---
 
@@ -55,5 +63,5 @@
 ---
 ## **Things I want to know more about:**
 
-1. 
+1. How to use constructors inside classes?
 
