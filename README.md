@@ -30,7 +30,7 @@ ___
 1. [CSS Flexbox](201/class8-reading.md)
 1. [HTML Form, JavaScript Events](201/class9-reading.md)
 1. [Debugging HTML, CSS, JavaScript](201/class10-reading.md)
-1. [TBD](201/class11.md)
+1. [Video, Audio, Grid, Images](201/class11-reading.md)
 1. [TBD](201/class12.md)
 1. [TBD](201/class13.md)
 1. [TBD](201/class14.md)
