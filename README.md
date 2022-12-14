@@ -32,7 +32,7 @@ ___
 1. [Debugging HTML, CSS, JavaScript](201/class10-reading.md)
 1. [Video, Audio, Grid, Images](201/class11-reading.md)
 1. [JavaScript Canvas, Chart.js, Animated Charts](201/class12-reading.md)
-1. [TBD](201/class13.md)
+1. [Local Storage](201/class13-reading.md)
 1. [TBD](201/class14.md)
 1. [TBD](201/class15.md)
 
