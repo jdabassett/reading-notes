@@ -1,4 +1,4 @@
-# Flashcards: Javascript Variables and Functions
+# **102 Class07 Reading Notes:**
 
 ___
 ___

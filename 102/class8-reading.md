@@ -1,4 +1,4 @@
-# Flashcards: Javascript Iterables
+# **102 Class08 Reading Notes:**
 
 ___
 ___

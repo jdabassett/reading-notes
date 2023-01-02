@@ -1,4 +1,4 @@
-# Flashcards: Text editor, Commandline, and File Storage
+# **102 Class02 Reading Notes:**
 ---
 ---
 ---

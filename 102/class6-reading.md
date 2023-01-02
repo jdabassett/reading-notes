@@ -1,5 +1,4 @@
-# Flashcards: Javascript
-
+# **102 Class06 Reading Notes:**
 ___
 ___
 ___
