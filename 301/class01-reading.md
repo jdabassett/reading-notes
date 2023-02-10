@@ -2,22 +2,32 @@
 ---
 ---
 ---
+## Why are these reading important?
+
+```
+This will provide the bases for our learning about the React framework.
+```
+
+---
 
 ## [**Component-Based Architecture:**](https://www.tutorialspoint.com/software_architecture_design/component_based_architecture.htm)
 
 * What is a 'component'?
 
 ```
+A component is a software object, intended to interact with other components, encapsulating certain functionality or a set of functionalities. citation: 'What is a Component?'
 ```
 
 * What are the characteristics of a component?
 
 ```
+It is a modular, portable, replaceable, and reusable set of well-defined functionality that encapsulates its implementation. citation: 'What is a Component?
 ```
 
 * What are the advantages of using component-based architecture?
 
 ```
+Components are designed to be easy to deploy, easy to develop, reusable, reliable, easier maintenance, and independent of surrounding code. citation: 'Conducting Component-Level Design'
 ```
 
 ---
@@ -27,16 +37,19 @@
 * What is 'props' short for?
 
 ```
+properties
 ```
 
 * How are props used in React?
 
 ```
+To pass data between components.
 ```
 
 * What is the flow of props?
 
 ```
+Data flows between React components in one way from parent to child(unidirectional flow); in a read-only fashion.
 ```
 
 ---
@@ -64,5 +77,5 @@
 ---
 ## **Things I want to know more about:**
 
-1. 
+1. Everything. This all feels really confusing to me.
 

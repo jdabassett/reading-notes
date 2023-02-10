@@ -52,7 +52,7 @@ ___
 
 ### **Code 301 - Intermediate Software Development<i id="301"></i>** 
 
-1. [TFB](301/class-reading.md)
+1. [Intro to React and Components](301/class01-reading.md)
 1. [TFB](301/class-reading.md)
 1. [TFB](301/class-reading.md)
 1. [TFB](301/class-reading.md)
