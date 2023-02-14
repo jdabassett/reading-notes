@@ -54,7 +54,7 @@ ___
 
 1. [Intro to React and Components](301/class01-reading.md)
 1. [Readings: State and Props](301/class02-reading.md)
-1. [TFB](301/class-reading.md)
+1. [React Docs - lists and keys](301/class03-reading.md)
 1. [TFB](301/class-reading.md)
 1. [TFB](301/class-reading.md)
 1. [TFB](301/class-reading.md)
