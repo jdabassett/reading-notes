@@ -5,6 +5,7 @@
 ## Why are these reading important?
 
 ```
+Forms can be the most difficult component to work with in React. Good luck!
 ```
 
 ---
@@ -66,5 +67,5 @@ if(x===y){
 ---
 ## **Things I want to know more about:**
 
-1. 
+1. Bootstrap, Bootstrap, Bootstrap
 
