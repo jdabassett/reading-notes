@@ -52,16 +52,19 @@ State. State is the means by which components are made dynamic and trigger reren
 * What is a “higher-order function”?
 
 ```
+Functions that operate on other functions, either by taking them as arguments or by returning them.
 ```
 
 * Explore the greaterThan function as defined in the reading. In your own words, what is line 2 of this function doing?
 
 ```
+It is using an arrow function that will be nested with the greaterThan function. In this way the greaterThan function can be accept parameters that when generating new functions that can rely on those parameters.
 ```
 
 * Explain how either map or reduce operates, with regards to higher-order functions.
 
 ```
+Both map and reduce accept functions(often arrow function) as a parameter to accomplish their tasks.
 ```
 
 ---
@@ -69,5 +72,5 @@ State. State is the means by which components are made dynamic and trigger reren
 ---
 ## **Things I want to know more about:**
 
-1. 
+1. I need more practice working with higher-order functions.
 
