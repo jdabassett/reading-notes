@@ -5,6 +5,7 @@
 ## Why are these reading important?
 
 ```
+This provides a blue print of how we should start constructing our React apps.
 ```
 
 ---
