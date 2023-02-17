@@ -57,7 +57,7 @@ ___
 1. [React Docs - lists and keys](301/class03-reading.md)
 1. [React Forms and Ternary Operator](301/class04-reading.md)
 1. [React Thinking and Higher-Order Functions](301/class05-reading.md)
-1. [TFB](301/class-reading.md)
+1. [Node and Pair Programming](301/class06-reading.md)
 1. [TFB](301/class-reading.md)
 1. [TFB](301/class-reading.md)
 1. [TFB](301/class-reading.md)
