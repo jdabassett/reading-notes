@@ -32,28 +32,23 @@
 
 * What is npm?
 
-```
-```
+    Is a package manager that comes installed with Node.
 
 * What version of node are you running on your machine?
 
-```
-```
+    v19.5.0
 
 * What version of npm are you running on your machine?
 
-```
-```
+    9.3.1
 
 * What command would you type to install a library/package called 'jsint'?
 
-```
-```
+    npm install -g jshint
 
 * What is node used for?
 
-```
-```
+    So that developers can run JavaScript code locally. This allows JavaScript to be used as a language to perform tasks on the server-side.
 
 ---
 
@@ -61,18 +56,21 @@
 
 * What are the 6 reasons for pair programming?
 
-```
-```
+1. Greater Efficiency
+1. Engaged Collaboration
+1. Leaning From Collaborators
+1. Social Skills
+1. Job Interview Readiness
+1. Work Environment Readiness
+
 
 * In your experience, which of these reasons have you found most beneficial?
 
-```
-```
+    Currently, I appreciate seeing how others solve problems. Even if I might prefer my own solution, I still appreciate learning other approaches that could have added benefits.
 
 * How does pair programming work?
 
-```
-```
+    Two programs work simultaneously on a problem. One writes the code(Driver) while the second is consulting and proof-checking along the way.
 
 ---
 
