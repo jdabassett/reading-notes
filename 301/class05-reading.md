@@ -15,7 +15,7 @@ This provides a blue print of how we should start constructing our React apps.
 * What is the single responsibility principle and how does it apply to components?
 
 ```
-The phylosophy that an object, function, or in our case a component should do only one thing. It it grows to do multiple things, then it should be broken up into subcomponents.
+The phylosophy that an object, function, or in our case a component should do only one thing. If it grows to do multiple things, then it should be broken up into subcomponents.
 ```
 
 * What does it mean to build a ‘static’ version of your application?

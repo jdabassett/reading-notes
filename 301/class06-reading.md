@@ -5,6 +5,7 @@
 ## Why are these reading important?
 
 ```
+We will be using node.js for the server-side work and also performing a lot of pair-programming.
 ```
 
 ---
@@ -89,5 +90,5 @@
 ---
 ## **Things I want to know more about:**
 
-1. 
+1. I need to practice async and await keywords.
 
