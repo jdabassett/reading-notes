@@ -48,11 +48,15 @@
 
 * Did you get your API key?
 
+  Yes
+
 ---
 
 ## [**Weather Bit API:**](https://www.weatherbit.io/)
 
 * Did you get your API key?
+
+  Yes
 
 ---
 
@@ -60,11 +64,17 @@
 
 * Did you get your API key?
 
+  I have an account; but am waiting to created a project and don't have a key for it.
+
 ---
 
 ## [**The Movie DB API Docs:**](https://developers.themoviedb.org/3/getting-started/introduction)
 
 * Did you get your API key?
+
+  I have an account; but am waiting to created a project and don't have a key for it.
+
+  
 
 ---
 ---
