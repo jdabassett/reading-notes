@@ -64,7 +64,7 @@
 
 * Did you get your API key?
 
-  I have an account; but am waiting to created a project and don't have a key for it.
+  Yes
 
 ---
 
@@ -72,7 +72,7 @@
 
 * Did you get your API key?
 
-  I have an account; but am waiting to created a project and don't have a key for it.
+  I have an account; I am having trouble navigating the process. I need some instruction during class.
 
   
 
