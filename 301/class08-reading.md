@@ -5,6 +5,7 @@
 ## Why are these reading important?
 
 ```
+This reading will help familiarize the reader with what happens during a request to a API and some useful tools and cheatsheets for working with regular expressions.
 ```
 
 ---
@@ -58,20 +59,21 @@
 
 ---
 
-## [**:**]()
+## [**RegExr:**](https://regexr.com/)
 
 ---
 
-## [**:**]()
+## [**Regex Tutorial:**](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 
 ---
 
-## [**:**]()
+## [**Regex 101:**](https://regex101.com/)
 
 ---
 ---
 ---
 ## **Things I want to know more about:**
 
-1. 
+1. Everything.
+1. I need to practice requests both in Javascript and Python.
 
