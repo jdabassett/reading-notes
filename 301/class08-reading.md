@@ -55,7 +55,7 @@ This reading will help familiarize the reader with what happens during a request
 
 * What status code does a successful DELETE request return?
 
-  204
+    204
 
 ---
 
