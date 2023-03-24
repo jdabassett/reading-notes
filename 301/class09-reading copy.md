@@ -23,7 +23,8 @@ React is largely a functional programming endeavor these days. Taking a step bac
   Second, there can be no side effects.
 
 * What are the benefits of a pure function?
-
+ 
+ 
   First, they are predictable and thus robust, reliable, easier to understand, easier to test/debug.
   Second, since they don't take in global variables or have side-effects; they can be very fast.
   Third, they have better performance since they use less memory and are often faster.
