@@ -18,7 +18,7 @@ ___
 1. [Code 401 - Advanced Software Development - Python](#401)
 
 
-### **Code 102 - Intro to Software Development<i id="102"></i>** 
+### **<i id="102"></i>Code 102 - Intro to Software Development** 
 
 1. [Markdown](102/class1-reading.md)
 1. [Terminal and Text Editor](102/class2-reading.md)
@@ -31,7 +31,7 @@ ___
 
 ---
 
-### **Code 201 - Foundations of Software Development<i id="201"></i>**
+### **<i id="201"></i>Code 201 - Foundations of Software Development**
 
 1. [How the Web Works](201/class1-reading.md)
 1. [Basics of HTML, CSS, and JS](201/class2-reading.md)
@@ -51,7 +51,7 @@ ___
 ---
 
 
-### **Code 301 - Intermediate Software Development<i id="301"></i>** 
+### **<i id="301"></i>Code 301 - Intermediate Software Development** 
 
 1. [Intro to React and Components](301/class01-reading.md)
 1. [Readings: State and Props](301/class02-reading.md)
@@ -74,7 +74,7 @@ ___
 
 ---
 
-### **Code 401 - Advanced Software Development - Python<i id="401"></i>**
+### **<i id="401"></i>Code 401 - Advanced Software Development - Python**
 
 
 
