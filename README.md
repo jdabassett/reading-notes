@@ -62,7 +62,7 @@ ___
 1. [REST and API Tokens](301/class07-reading.md)
 1. [API and Regex](301/class08-reading.md)
 1. [Functional Programming](301/class09-reading.md)
-1. [TFB](301/class10-reading.md)
+1. [Memory Storage](301/class10-reading.md)
 1. [MongoDB and Mongoose](301/class11-reading.md)
 1. [TFB](301/class-reading.md)
 1. [TFB](301/class-reading.md)
