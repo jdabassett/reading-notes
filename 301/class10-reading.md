@@ -1,10 +1,11 @@
-# **Class00 Reading Notes:**
+# **Class10 Reading Notes:**
 ---
 ---
 ---
 ## Why are these reading important?
 
 ```
+By the end of this reading you will better understand how the Call Stack operates and how to work with the Error Messages provided when a bug arrises.
 ```
 
 ---
@@ -58,35 +59,15 @@
 * What does the word 'debugger' do in your code?
 
   It is a keyword that stops the script at a give line.
-  
----
-
-## [**:**]()
-
-*
-
-
-
-* 
-
-
 
 ---
 
-## [**:**]()
-
-*
-
-
-
-* 
-
-
+## [**JavaScript errors reference on MDN:**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors)
 
 ---
 ---
 ---
 ## **Things I want to know more about:**
 
-1. 
+1. How to use the browser and the debugger keyword to troubleshoot a bug.
 
