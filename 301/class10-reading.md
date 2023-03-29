@@ -33,15 +33,32 @@
 
 ---
 
-## [**:**]()
+## [**Javascript Error Messages:**](https://codeburst.io/javascript-error-messages-debugging-d23f84f0ae7c)
 
-*
+* What is a 'reference error'?
 
+  When a function relies on a variable that wasn't defined before the function was declared.
 
-* 
+* What is a 'syntax error'?
 
+  This error is for problems relating to syntax/spelling/grammar.
 
+* What is a 'range error'?
 
+  Most often referencing outside of the range of a list/array.
+
+* What is a 'type error'?
+
+  Passing a variable/operand that doesn't fit the type expected for that function/operation.
+
+* What is a breakpoint?
+
+  It is a debugger statement places at a given line that will stop or pause the script when a condition is meet.
+
+* What does the word 'debugger' do in your code?
+
+  It is a keyword that stops the script at a give line.
+  
 ---
 
 ## [**:**]()
