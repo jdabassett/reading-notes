@@ -5,6 +5,7 @@
 ## Why are these reading important?
 
 ```
+This will provide a good framework for setting up a rest api.
 ```
 
 ---
@@ -49,43 +50,46 @@
 
 ---
 
-## [**:**]()
+## [**Build A REST API With Node.js, Express, & MongoDB - Quick - First 20 minutes:**](https://www.youtube.com/watch?v=fgTGADljAeg)
 
-*
+* Why do we need to pull our MongoDB database string out of our server and put it into our .env?
 
+  For privacy so that it won't be includes in out deployment.
 
-* 
+* What is middleware?
 
+  For Express a HTTP request triggers the execution of a list of middleware functions. These functions will parse/handle a resquest and create a response.
 
+* What does app.use(express.json()) do?
 
----
+  'express.json()' is a middleware function that parses incoming JSON requests and puts the data into req.body.
 
-## [**:**]()
+* What does the /:id mean in a route?
 
-*
+  This is a placeholder for information that will add in the resolution of a request.
 
+* What is a the difference between PUT and PATCH?
 
+  PUT requests must contain all information for a document that will subsequently be replaced by it.
 
-* 
+  PATCH requests can contain any portion of a full document while only updating the pertainant parts.
 
+* How do you make a default value in a schema?
 
+  Use the 'required' key along with a boolean of true or false within the declaration of the schema.
 
----
+* What does a 500 error status code mean?
 
-## [**:**]()
+  Server encountered a condition that prevented the requests fulfillment.
 
-*
+* What is the difference between a status 200 and a status 201?
 
-
-
-* 
-
-
+  200 is a general "all is okay", where as 201 is a more specific "document was successfully created".
 
 ---
 ---
 ---
 ## **Things I want to know more about:**
 
-1. 
+1. How to set up routers using express.router?
 
