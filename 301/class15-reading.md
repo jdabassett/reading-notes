@@ -42,23 +42,31 @@ After these reading you will have a better understanding of how third party auth
 
 * What is the difference between authorization and authentication?
 
+  Authenication is demonstrating ownership over an asset, where as authorization is the approval granted to third-parties to access that asset.
 
 * What is Authorization Code Flow?
 
+  Is a process of exchanging an authorization code for an access token.
 
 * What is Authorization Code Flow with Proof Key for Code Exchange (PKCE)?
 
+  Is is the same as Authorization Code Flow only with the additional use of a proof key for added security. Use especially for  mobile, native applications.
 
 * What is Implicit Flow with Form Post?
 
+  Implicit Flow is an less secure alternative to Authorization Code Flow intended for application unable to securely store client data. Implicit Flow can be used in conjunction with Form Post
 
 * What is Client Credentials Flow?
 
+  For machine to machine applications a server will authenicate/authorize an app rather than a user.
 
 * What is Device Authorization Flow?
 
+  For input constrained devices a server/database will authenicate/authorize a device rather than a user.
 
 * What is Resource Owner Password Flow?
+
+  Highly trusted application can use this to request client credientials through a form. (Prefer Authorization Code Flow to this.)
 
 ---
 
@@ -70,5 +78,5 @@ After these reading you will have a better understanding of how third party auth
 ---
 ## **Things I want to know more about:**
 
-1. 
+1. I want to practice using AuthO React SDK.
 
