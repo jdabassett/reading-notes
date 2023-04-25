@@ -1,94 +1,83 @@
-# **Class06 Reading Notes:**
+# **Class07 Reading Notes:**
 ---
 ---
 ---
 ## Why are these reading important?
 
-```
-We will be using node.js for the server-side work and also performing a lot of pair-programming.
-```
+  They will provide context for API requests.
 
 ---
 
-## [**An Introduction to Node.js on sitepoint.com:**](https://www.sitepoint.com/an-introduction-to-node-js)
-
-* *What is node.js?*
-
-
-    Node.js is a Javascript runtime built on Chrome's V8 JavaScript engine.citation: [Node.js](https://nodejs.org/en/)
-
-    Or, Node.js is an event-based, non-blocking,asnchronous I/O runtime that uses Google's V8 JavaScript engine and libuv library. citation: [Stack Overflow](https://stackoverflow.com/tags/node.js/info)
-
-
-* *In your own words, what is Chrome's V8 JavaScript Engine?*
-
-
-    It is an open-source JavaScript engine to compile JavaScript directly into machine code. It was design strictly with performance in mind and runs on Chromium based web browsers.
-
-
-* *What does it mean that node is a JavaScript runtime?*
-
-    A runtime environment is where a program will be executed. Normally for JavaScript this happens in a browser, the exception being with Node. JavaScript can be compiled and executed outside of the browser.
-
-
-* What is npm?
-
-    Is a package manager that comes installed with Node.
-
-* What version of node are you running on your machine?
-
-    v19.5.0
-
-* What version of npm are you running on your machine?
-
-    9.3.1
-
-* What command would you type to install a library/package called 'jsint'?
-
-    npm install -g jshint
-
-* What is node used for?
-
-    So that developers can run JavaScript code locally. This allows JavaScript to be used as a language to perform tasks on the server-side.
+## [**What Google Learned From Its Quest to Build the Perfect Team:**](https://www.google.com/amp/mobile.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.amp.html)
 
 ---
 
-## [**6 Reasons for Pair Programming:**](https://www.codefellows.org/blog/6-reasons-for-pair-programming/)
+## [**How I explained REST to my brother:**](https://gist.github.com/brookr/5977550)
 
-* What are the 6 reasons for pair programming?
+* Who is Roy Feilding?
 
-1. Greater Efficiency
-1. Engaged Collaboration
-1. Leaning From Collaborators
-1. Social Skills
-1. Job Interview Readiness
-1. Work Environment Readiness
+  He is one of the early creators of the protocols that servers use to connect and transfer data to one another.
 
+* Why don't the techniques that we use in this class work well when we need to be able to talk to all of the machines in the world?
 
-* In your experience, which of these reasons have you found most beneficial?
+  The protocols to transfer data for web pages is standardized were as the protocols for machines to connect and transfer data are not standardized.
 
-    Currently, I appreciate seeing how others solve problems. Even if I might prefer my own solution, I still appreciate learning other approaches that could have added benefits.
+* What is the HTTP protocol that Fielding and his friends created?
 
-* How does pair programming work?
+  An HTTP protocol is designed to coordinate the communication and transfer of data between a client and server.
 
-    Two programs work simultaneously on a problem. One writes the code(Driver) while the second is consulting and proof-checking along the way.
+* What does a GET do?
+
+  Requests data from specified resource
+
+* What does a POST do?
+
+  Requests that supplied data will be stored in the servers.
+
+* What does PUT do?
+
+  Similar to POST but multiple PUT requests will have the same effect, were as POST requests could have side-effects.
+
+* What does PATCH do?
+
+  Request to partially modify resource.
 
 ---
 
-## [**Geocoding API Docs:**](https://locationiq.com/)
+## [**Geocoding API:**](https://locationiq.com/)
+
+* Did you get your API key?
+
+  Yes
 
 ---
 
-## [**Axios docs:**](https://www.npmjs.com/package/axios)
+## [**Weather Bit API:**](https://www.weatherbit.io/)
+
+* Did you get your API key?
+
+  Yes
 
 ---
 
-## [**MDN async and await:**](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
+## [**Yelp API Docs:**](https://www.yelp.com/developers/documentation/v3/business_search)
+
+* Did you get your API key?
+
+  Yes
+
+---
+
+## [**The Movie DB API Docs:**](https://developers.themoviedb.org/3/getting-started/introduction)
+
+* Did you get your API key?
+
+  Yes
 
 ---
 ---
 ---
 ## **Things I want to know more about:**
 
-1. I need to practice async and await keywords.
+1. What libraries will we be using to set up a server? (Mongoose? ; Express?)
 
