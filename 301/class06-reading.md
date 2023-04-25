@@ -1,4 +1,4 @@
-# **Class07 Reading Notes:**
+# **Class06 Reading Notes:**
 ---
 ---
 ---
