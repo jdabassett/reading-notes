@@ -68,9 +68,6 @@ ___
 1. [MORE CRUD](301/class13-reading.md)
 1. [Diversity and Inclusion in the Tech Industry](301/class14-reading.md)
 1. [Authenication and Authorization](301/class15-reading.md)
-1. [TFB](301/class-reading.md)
-1. [TFB](301/class-reading.md)
-1. [TFB](301/class-reading.md)
 
 ---
 
