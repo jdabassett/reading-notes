@@ -5,7 +5,7 @@
 ## Why are these reading important?
 
 ```
-
+Understanding "Why diversity in the workplace matters?" will motivate our actions to foster a diverse work culture.
 ```
 
 ---
