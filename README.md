@@ -81,6 +81,8 @@ Prework. [The Growth Mindset](401/class-reading-prework-growth-mindset.md)
 <br>
 Prework. [Engineering Readings](401/class-reading-prework-engineering-readings.md)
 <br>
+Prework. [Data Structures and Algorithms](401/class-reading-prework-dsa.md)
+<br>
 
 1. [TFB](401/class-reading.md)
 1. [TFB](401/class-reading.md)
