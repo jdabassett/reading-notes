@@ -75,9 +75,11 @@ ___
 
 Prework. [SQL](401/class-reading-prework-sql.md)
 <br>
-Prework. [Prework-Terminal](401/class-reading-prework-terminal.md)
+Prework. [Terminal](401/class-reading-prework-terminal.md)
 <br>
 Prework. [The Growth Mindset](401/class-reading-prework-growth-mindset.md)
+<br>
+Prework. [Engineering Readings](401/class-reading-prework-engineering-readings.md)
 <br>
 
 1. [TFB](401/class-reading.md)
