@@ -73,9 +73,13 @@ ___
 
 ### **<i id="401"></i>Code 401 - Advanced Software Development - Python**
 
-1. [Prework-SQL](401/class-reading-prework-sql.md)
-1. [Prework-Terminal](401/class-reading-prework-terminal.md)
-1. [TFB](401/class-reading.md)
+Prework. [SQL](401/class-reading-prework-sql.md)
+<br>
+Prework. [Prework-Terminal](401/class-reading-prework-terminal.md)
+<br>
+Prework. [The Growth Mindset](401/class-reading-prework-growth-mindset.md)
+<br>
+
 1. [TFB](401/class-reading.md)
 1. [TFB](401/class-reading.md)
 1. [TFB](401/class-reading.md)
