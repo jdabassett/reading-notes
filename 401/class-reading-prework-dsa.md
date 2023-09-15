@@ -44,7 +44,18 @@ Data structures are the shit! In programming there is never one way to solve a p
 
 ## [**Basic Data Structures:**](https://towardsdatascience.com/8-common-data-structures-every-programmer-must-know-171acf6a1a42)
 
-* I have read this once in the past but couldn't access and reread it before writing and submitting this assignment. The article is behind a paywall. And no deleting cookies cannot bypass it.
+* Prompt: What are some basic data structures?
+
+* Solution:
+
+1. Array/ List
+1. Linked List
+1. Stack
+1. Queue
+1. Hash Table
+1. Trees
+1. Heaps
+1. Graphs
 
 ---
 
