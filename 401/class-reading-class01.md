@@ -54,14 +54,6 @@ Exponential Time: O(2^N)
 
   Solution: Nothing. DATA IS NEVER COPIED!
 
-* Prompt: 
-
-  Solution: 
-
-* Prompt: 
-
-  Solution: 
-
 ---
 
 ## [**Python Module of the Week:**](https://pymotw.com/3/index.html)
@@ -94,7 +86,7 @@ Mutable data types are changeable/mutable/maliable/reassignable where Immutable 
 
 ---
 
-## [**What I want to learn more about:**]
+## **What I want to learn more about:**
 
 1. I need to practice labeling my code with Big O notation.
 
