@@ -85,7 +85,7 @@ Prework. [Data Structures and Algorithms](401/class-reading-prework-dsa.md)
 <br>
 
 1. [Pain, BigO, and Names+Values](401/class-reading-class01.md)
-1. [TFB](401/class-reading.md)
+1. [Testing and Modules](401/class-reading-class02.md)
 1. [TFB](401/class-reading.md)
 1. [TFB](401/class-reading.md)
 1. [TFB](401/class-reading.md)
