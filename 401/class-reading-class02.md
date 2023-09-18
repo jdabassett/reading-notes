@@ -7,7 +7,7 @@
 ## Why are these reading important?
 
 ```
-
+Testing, Recursion, and Modules oh my! Learning how to utilize testing will help us developers improve the quality of our code and reduce the headaches of developing it. Recursion is a niche superpower; when it works it can work really well. And the rest are Python specific reading covering modules, lists, and strings will help broaden our base of knowledge.
 ```
 
 ---
@@ -98,35 +98,36 @@ sys.path.append(r'new/dir/module.py')
 
 * Prompt: How to pass special character through as a string?
 
-    Solution: Use the r'special%string' syntax.
+    Solution: Use the r'special\string' syntax.
 
 
 ---
 
 ## [**Python Modules and Packages:**](https://realpython.com/python-modules-packages/)
 
-* Prompt: 
+* Prompt: How to access the local symbol table?
 
-    Solution: 
+    Solution: Use Dir() function. Will return list of all names in the local symbol table.
 
 
 ---
 
 ## [**Pytest Documentation:**](https://docs.pytest.org/en/latest/)
 
-* Prompt: 
-    
-    Solution: 
-
-
 ---
 
 ## [**Pytest Tutorial:**](https://www.guru99.com/pytest-tutorial.html)
 
-* Prompt: 
+* Prompt: How does pytest know which files to run?
     
-    Solution: 
+    Solution: By default they must either start with 'test_' or end with '_test'.
 
+* Prompt: What are some basic pytest decorators and what do they do?
+
+    Solution: 
+      1. @pytest.mark.markName sets the mark name so unit test can be called separately
+      1. @pytest.fixture sets apart a function to execute first and pass it's contents to other unit tests.
+      1. @pytest.mark.parameterize allows for several inputs and outputs to be passed into a unit test.
 
 ---
 
