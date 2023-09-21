@@ -125,9 +125,9 @@ sys.path.append(r'new/dir/module.py')
 * Prompt: What are some basic pytest decorators and what do they do?
 
     Solution: 
-      1. @pytest.mark.markName sets the mark name so unit test can be called separately
-      1. @pytest.fixture sets apart a function to execute first and pass it's contents to other unit tests.
-      1. @pytest.mark.parameterize allows for several inputs and outputs to be passed into a unit test.
+    1. @pytest.mark.markName sets the mark name so unit test can be called separately
+    1. @pytest.fixture sets apart a function to execute first and pass it's contents to other unit tests.
+    1. @pytest.mark.parameterize allows for several inputs and outputs to be passed into a unit test.
 
 ---
 

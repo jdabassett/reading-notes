@@ -1,4 +1,4 @@
-# **Prework Reading Notes:**
+# **Reading Notes:**
 
 ---
 ---
@@ -6,8 +6,7 @@
 
 ## Why are these reading important?
 
-```markdown
-
+```
 ```
 
 ---
@@ -15,39 +14,9 @@
 ## [**:**]()
 
 * Prompt:
+  Solution:
 
-* Solution:
-
-```bash
 ```
-
-* Prompt: 
-
-* Solution: 
-
----
-
-## [**:**]()
-
-* Prompt: 
-
-* Solution:
-
-```bash
-```
-
-* Prompt: 
-
-* Solution:
-
-```bash
-```
-
-* Prompt:
-
-* Solution:
-
-```bash
 ```
 
 ---
@@ -55,24 +24,9 @@
 ## [**:**]()
 
 * Prompt: 
+  Solution:
 
-* Solution: 
-
-```bash
 ```
-
-* Prompt: 
-
-* Solution: 
-
-```bash
-```
-
-* Prompt: 
-
-* Solution:
-
-```bash
 ```
 
 ---
@@ -80,10 +34,9 @@
 ## [**:**]()
 
 * Prompt: 
+  Solution: 
 
-* Solution: 
-
-```bash
+```
 ```
 
 ---
@@ -91,50 +44,42 @@
 ## [**:**]()
 
 * Prompt: 
+  Solution: 
 
-* Solution: 
-
-```bash
 ```
-
-* Prompt:
-
-* Solution:
-
-```bash
-```
-
-* Prompt: 
-
-* Solution:
-
-```bash
-```
-
-* Prompt: 
-
-* Solution:
-
-```bash
-```
-
-* Prompt:
-
-* Solution:
-
-```bash
-```
-
-* Prompt: 
-
-* Solution: 
-
-```bash
 ```
 
 ---
 
 ## [**:**]()
+
+* Prompt: 
+  Solution: 
+
+```
+```
+
+---
+
+
+## [**Reading Questions:**]()
+
+1. Prompt: 
+  Solution: 
+
+1. Prompt:
+  Solution:
+
+1. Prompt:
+  Solution:
+
+---
+
+## **What I want to learn more about:**
+
+1.
+1.
+1.
 
 ---
 ---
