@@ -14,12 +14,13 @@ Learning how to handle files is learning how to import data into our programs an
 
 ## [**Read and Write Files in Python:**](https://realpython.com/read-write-files-python/)
 
-* Prompt:
-
-  Solution:
-
-```
-```
+* Prompt: What are the different open file 'modes' to chose from and their corresponding symbols?
+  * 'r' for read
+  * 'w' for write
+  * 'rb' for read binary
+  * 'wb' for write binary
+  * 'x' for create
+  * 'a' for append
 
 ---
 
@@ -28,9 +29,6 @@ Learning how to handle files is learning how to import data into our programs an
 * Prompt: What are the 4 parts of a try+except block?
 
   Solution: Try, Except, Else, and Finally.
-
-```
-```
 
 ---
 
@@ -53,24 +51,6 @@ with open('image.jpg','rb') as rf:
 ---
 
 ## [**Reading and Writing Files in Python Quiz:**](https://realpython.com/quizzes/read-write-files-python/)
-
-* Prompt: 
-
-  Solution: 
-
-```
-```
-
----
-
-## [**:**]()
-
-* Prompt: 
-
-  Solution: 
-
-```
-```
 
 ---
 
@@ -106,8 +86,7 @@ finally:
 ## **What I want to learn more about:**
 
 1. I need to learn more about how to handle exceptions.
-1.
-1.
+1. I need to practice working with files in python.
 
 ---
 ---
