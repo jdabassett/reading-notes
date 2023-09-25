@@ -16,8 +16,6 @@
 * Prompt:
   Solution:
 
-```
-```
 
 ---
 
@@ -26,8 +24,6 @@
 * Prompt: 
   Solution:
 
-```
-```
 
 ---
 
@@ -36,8 +32,12 @@
 * Prompt: 
   Solution: 
 
-```
-```
+---
+
+## [**:**]()
+
+* Prompt: 
+  Solution: 
 
 ---
 
@@ -46,18 +46,6 @@
 * Prompt: 
   Solution: 
 
-```
-```
-
----
-
-## [**:**]()
-
-* Prompt: 
-  Solution: 
-
-```
-```
 
 ---
 
