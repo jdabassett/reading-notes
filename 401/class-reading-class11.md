@@ -59,7 +59,6 @@ print(arr0[2:20:2])       #[ 2  4  6  8 10 12 14 16 18]
 #iterate over an array in a given direction
 for x in np.nditer(arr1,order="F"):
     print(x)  #0 10 20 30 40 50....
-
 ```
 
 ---
@@ -67,7 +66,6 @@ for x in np.nditer(arr1,order="F"):
 ## **What I want to learn more about:**
 
 1. What are the rules of broadcasting and how to follow them when performing operations between arrays?
-1. 
 
 ---
 ---
