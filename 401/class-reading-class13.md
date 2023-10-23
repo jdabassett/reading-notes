@@ -7,6 +7,7 @@
 ## Why are these reading important?
 
 ```
+Linear regression is one of the most basic methods in data analysis. If you want to understand anything in data analysis, linear regression is a great place to start.
 ```
 
 ---
@@ -39,20 +40,40 @@
 
 1. Prompt: Describe the process of implementing a linear regression model using Python’s Scikit Learn library, including the necessary steps and functions.
 
-  Solution: 
+```
+# example taken from 'How to Run Linear Regression in Python'
+
+# import numpy, pyplot, and LinearRegression tools
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+# create random dependent and independent data in arrays
+rnstate = np.random.RandomState(1)
+x = 10 * rnstate.rand(50)
+y = 2 * x - 5 + rnstate.randn(50)
+
+# create model
+model = LinearRegression(fit_intercept=True)
+
+# train on new data
+model.fit(x[:, np.newaxis], y)
+
+# generate training data
+xfit = np.linspace(0, 10, 1000)
+
+# make predictions based on training data
+yfit = model.predict(xfit[:, np.newaxis])
+```
 
 1. Prompt: What is the purpose of splitting the dataset into train and test sets, and how does this contribute to the evaluation of a machine learning model’s performance?
 
-  Solution: 
-
-```python
-```
+  Solution: The purpose is to hold data in reserve for testing. The thinking is that is you only evaluate your model on the same data that it was trained on then it to increase it's score the model will invariably become 'overfit' meaning that it excels at predictions for the current dataset but will struggle with 'fresh' data.
 
 ---
 
 ## **What I want to learn more about:**
 
-1. 
+1. Practice, practice, practice. I am opening up Kaggle right now to set a few reps in.
 
 ---
 ---
