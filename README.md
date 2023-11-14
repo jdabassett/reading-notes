@@ -101,7 +101,7 @@ Prework. [Data Structures and Algorithms](401/class-reading-prework-dsa.md)
 1. [Trees](401/class-reading-class15.md)
 1. [Serverless, Vercel, venv, and API requests](401/class-reading-class16.md)
 1. [Web Scraping](401/class-reading-class17.md)
-1. [TFB](401/class-reading.md)
+1. [Automation](401/class-reading-class18.md)
 1. [TFB](401/class-reading.md)
 1. [TFB](401/class-reading.md)
 
