@@ -103,7 +103,7 @@ Prework. [Data Structures and Algorithms](401/class-reading-prework-dsa.md)
 1. [Web Scraping](401/class-reading-class17.md)
 1. [Automation](401/class-reading-class18.md)
 1. [Intro to Django](401/class-reading-class26.md)
-1. [TFB](401/class-reading.md)
+1. [Django Models](401/class-reading-class27.md)
 
 1. [TFB](401/class-reading.md)
 
