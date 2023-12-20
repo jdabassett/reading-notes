@@ -5,6 +5,7 @@
 ## Why are these reading important?
 
 ```
+Handling user credientials and validation is essential to building more complex and interesting applications. 
 ```
 
 
