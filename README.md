@@ -107,6 +107,7 @@ Prework. [Data Structures and Algorithms](401/class-reading-prework-dsa.md)
 1. [Django CRUD and Forms](401/class-reading-class28.md)
 1. [Django Custom User](401/class-reading-class29.md)
 1. [Hash Tables](401/class-reading-class30.md)
+
 1. [TFB](401/class-reading.md)
 1. [TFB](401/class-reading.md)
 1. [TFB](401/class-reading.md)
