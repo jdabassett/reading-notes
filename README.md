@@ -48,6 +48,7 @@ ___
 1. [Local Storage](201/class13-reading.md)
 1. [CSS Transforms and Animation](201/class14-reading.md)
 
+
 ---
 
 
@@ -104,7 +105,7 @@ Prework. [Data Structures and Algorithms](401/class-reading-prework-dsa.md)
 1. [Automation](401/class-reading-class18.md)
 1. [Intro to Django](401/class-reading-class26.md)
 1. [Django Models](401/class-reading-class27.md)
-1. [Django CRUD and Forms](401/class-reading-class28.md)
+<!-- 1. [Django CRUD and Forms](401/class-reading-class28.md) -->
 1. [Django Custom User](401/class-reading-class29.md)
 1. [Hash Tables](401/class-reading-class30.md)
 
