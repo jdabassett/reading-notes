@@ -23,6 +23,7 @@ regular.items()   #returns list of key value pairs
 regular.keys()    #returns list of keys
 regular.values()  #returns list of values
 regular.clear()   #clears dictionary
+regular.update({...}) #merge dictionaries with update
 ```
 
 ---
