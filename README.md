@@ -111,7 +111,7 @@ Prework. [Data Structures and Algorithms](401/class-reading-prework-dsa.md)
 1. [Django REST Framework and Docker](401/class-reading-class31.md)
 
 1. [Django Permissions and Postgresql](401/class-reading-class32.md)
-1. [TFB](401/class-reading.md)
+1. [Django Models](401/class-reading-class33.md)
 1. [TFB](401/class-reading.md)
 
 ---
