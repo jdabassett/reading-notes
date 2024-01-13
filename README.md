@@ -112,6 +112,10 @@ Prework. [Data Structures and Algorithms](401/class-reading-prework-dsa.md)
 
 1. [Django Permissions and Postgresql](401/class-reading-class32.md)
 1. [Django Models](401/class-reading-class33.md)
+1. [API Document](401/class-reading-class34.md)
+1. [TFB](401/class-reading.md)
+1. [TFB](401/class-reading.md)
+1. [TFB](401/class-reading.md)
 1. [TFB](401/class-reading.md)
 
 ---
