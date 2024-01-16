@@ -44,17 +44,17 @@ We are guarranteed to encounter these challenges in an interview. Preparation is
 	2. Prompt: From the “6 tips to ace a whiteboard programming interview” article, can you identify and explain at least two strategies that can help improve your performance during a whiteboard programming interview?
 
 		Solution:
-		1.1. Don't be afraid to pause and think. Don't talk. Don't second guess or worry. Sit and think about the problem before sharing your thoughts and guiding the interviewer through your solution.
-		1.2. Visual or write down your approach and each step along the way.
+		2.1. Don't be afraid to pause and think. Don't talk. Don't second guess or worry. Sit and think about the problem before sharing your thoughts and guiding the interviewer through your solution.
+		2.2. Visual or write down your approach and each step along the way.
 
 
 	3. Prompt: What does Gayle McDowell say about interview preparation in the Engineering Interview Process Deconstructed video?
 
 		Solution:
-		1.1. The interview is a measure of your problem-solving skills, and aptitude. Not a measure of your memorization, and regurgitation abilities.
-		1.2. From the interviewers perspective, "The more effective a candidate can be prepared for a type of question, the less informative that type of question is to measure a candidates aptitude." Avoid questions that require complex but formulaic solutions.
-		1.3. From the interviewers perspective, "Do the questions we ask align with the skills we want in candidates?" If we only hire candidate with niche knowledge we are expecting them to train in that knowledge. If their core job never leverages that knowledge again you are hiring candidates that have trained in the wrong expertise.
-		1.4. From the interviewers perspective, good problems have multiple smaller problem that must be solved and can be further optimized. Also avoid problems with specific mathematical solutions since those are really a quiz of the candidate's memory rather than ability to solve a novel problem.
+		3.1. The interview is a measure of your problem-solving skills, and aptitude. Not a measure of your memorization, and regurgitation abilities.
+		3.2. From the interviewers perspective, "The more effective a candidate can be prepared for a type of question, the less informative that type of question is to measure a candidates aptitude." Avoid questions that require complex but formulaic solutions.
+		3.3. From the interviewers perspective, "Do the questions we ask align with the skills we want in candidates?" If we only hire candidate with niche knowledge we are expecting them to train in that knowledge. If their core job never leverages that knowledge again you are hiring candidates that have trained in the wrong expertise.
+		3.4. From the interviewers perspective, good problems have multiple smaller problem that must be solved and can be further optimized. Also avoid problems with specific mathematical solutions since those are really a quiz of the candidate's memory rather than ability to solve a novel problem.
 
 ---
 
