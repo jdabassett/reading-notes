@@ -116,7 +116,7 @@ Prework. [Data Structures and Algorithms](401/class-reading-prework-dsa.md)
 1. [Whiteboard](401/class-reading-class35.md)
 1. [Graphs](401/class-reading-class36.md)
 1. [React 1](401/class-reading-class37.md)
-1. [TFB](401/class-reading.md)
+1. [React 2](401/class-reading-class38.md)
 1. [TFB](401/class-reading.md)
 
 ---
