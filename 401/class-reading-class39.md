@@ -11,7 +11,7 @@ Using context can help move data around a React application and simply the desig
 
 ---
 
-## [**NextJs:**](https://nextjs.org/learn/basics/getting-started)
+## [**NextJs:**](https://nextjs.org/learn-pages-router/basics/create-nextjs-app)
 
 
 ---
@@ -67,7 +67,14 @@ const MyComponent = () => {
 
 	4. Prompt: Describe the purpose of Next.js, and provide an example from the Vercel Next.js Examples reading on how it can be used to build a scalable web application.
 	
-		Solution:
+		Solution: Next.js is a framework build around React that adds some builtin features to the development of a web application. Look to React 1 Notes for a list of these added features.
+
+    The following terminal command creates a local clone of a template Next.js repository for a given type of web application. You can swap out the name for any number of templates that can serve as a starting place for a build.
+
+```bash
+#
+npx create-next-app@latest nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/main/basics/navigate-between-pages-starter"
+```
 
 ---
 
