@@ -44,7 +44,7 @@ Using context can help move data around a React application and simply the desig
 		Solution: React Context is a builtin tool for passing state down several components/levels from where the data is held in state to where it will be used. The motivation behind it's creation was to avoid passing data through down through multiple components that wouldn't use or alter it in anyway. This tedium is call 'prop drilling' and is something we should avoid in the design of our React apps and context can help with that.
 
 
-	3. Prompt: Explain the useContext Hook and how it can be used to access data from a React Context within a functional component.
+	2. Prompt: Explain the useContext Hook and how it can be used to access data from a React Context within a functional component.
 
 		Solution: The useContext hook is the downstream half of the context pipeline. With useContext we can unpack the data and functions passed down through context.(see below from ChatGPT) Once unpacked the data and functions can be used basically like any thing passed through props. Note that context is best used for data that is only rarely changed. This rule is for performance reasons to avoid excessive rerenders of all components that access context.
 
@@ -65,7 +65,7 @@ const MyComponent = () => {
 ```
 
 
-	4. Prompt: Describe the purpose of Next.js, and provide an example from the Vercel Next.js Examples reading on how it can be used to build a scalable web application.
+	3. Prompt: Describe the purpose of Next.js, and provide an example from the Vercel Next.js Examples reading on how it can be used to build a scalable web application.
 	
 		Solution: Next.js is a framework build around React that adds some builtin features to the development of a web application. Look to React 1 Notes for a list of these added features.
 
