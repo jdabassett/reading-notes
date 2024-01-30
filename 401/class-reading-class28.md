@@ -47,7 +47,7 @@
 
 ## **What I want to learn more about:**
 
-	1. I am across this problem. How can you perform the same task as the following code, `<a href="{% 'author' %}">Home</a>.` while using the reverse function instead of url? 
+	1. I am across this problem. How can you perform the same task as the following code, `removed because of error` while using the reverse function instead of url? 
 
 		Solution: I think you need to call a model method which in turn leverages the reverse function to generate a url. 
 		`<a href="{{ book.author.get_absolute_url }}">{{ book.author }}</a>`
