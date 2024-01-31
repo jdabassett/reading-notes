@@ -1,4 +1,4 @@
-# **Reading Notes:**
+# **Reading Notes: OSS Contributions**
 
 ---
 ---
@@ -7,7 +7,7 @@
 ## Why are these reading important?
 
 ```
-Giving bad while 
+Some benefits of Open-Source Contributions. First improves your skills, second gain experience, third gain recognition, fourth improved job prospects, and fifth better software for everyone! 
 ```
 
 ---
