@@ -7,67 +7,32 @@
 ## Why are these reading important?
 
 ```
+Giving bad while 
 ```
 
 ---
 
-## [**:**]()
-
-* Prompt:
-  Solution:
+## [**First Timers Only:**](https://www.firsttimersonly.com/)
 
 
 ---
 
-## [**:**]()
-
-* Prompt: 
-  Solution:
+## [**https://www.github.com/open-source:**](https://www.github.com/open-source)
 
 
 ---
 
-## [**:**]()
-
-* Prompt: 
-  Solution: 
+## [**What Motivates a Developer to Contribute to Open-Source Software?:**](https://clearcode.cc/blog/why-developers-contribute-open-source-software/)
 
 ---
 
-## [**:**]()
-
-* Prompt: 
-  Solution: 
-
----
-
-## [**:**]()
-
-* Prompt: 
-  Solution: 
+## [**List of Beginner-Friendly Projects:**](https://github.com/search?q=label%3Agood-first-issue+archived%3Afalse)
 
 
 ---
 
+## [**Call for Code: Open Source for Good:**](https://callforcode.org/)
 
-## [**Reading Questions:**]()
-
-1. Prompt: 
-  Solution: 
-
-1. Prompt:
-  Solution:
-
-1. Prompt:
-  Solution:
-
----
-
-## **What I want to learn more about:**
-
-1.
-1.
-1.
 
 ---
 ---
