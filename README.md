@@ -121,7 +121,7 @@ Prework. [Data Structures and Algorithms](401/class-reading-prework-dsa.md)
 1. [Ethics in Tech](401/class-reading-class40.md)
 1. [OSS Contributions](401/class-reading-class41.md)
 1. [React 4](401/class-reading-class42.md)
-1. [TFB](401/class-reading.md)
+1. [Pythonisms](401/class-reading-class43.md)
 1. [TFB](401/class-reading.md)
 1. [TFB](401/class-reading.md)
 
