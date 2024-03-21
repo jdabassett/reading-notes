@@ -6,7 +6,7 @@ ___
 
 ## **What is this website?**
 
-This website contains the notes Jacob Bassett took while taking the Code Fellows Courses 102, 201, 301, and 401. Okay it's not all of his notes, these are the notes he took while reading for these courses. If you ask, Jacob will be happy/ashamed to share his many flashcard. You heard right, Jacob practices new concepts with flashcards. 😊
+This website contains the notes Jacob Bassett took while taking the Code Fellows Courses 102, 201, 301, and 401. As well as some that he took after graduation. 😊
 
 ___
 
@@ -16,6 +16,7 @@ ___
 1. [Code 201 - Foundations of Software Development](#201)
 1. [Code 301 - Intermediate Software Development](#301)
 1. [Code 401 - Advanced Software Development - Python](#401)
+1. [Post - Graduation](#post_grad)
 
 
 ### **<i id="102"></i>Code 102 - Intro to Software Development** 
@@ -122,6 +123,13 @@ Prework. [Data Structures and Algorithms](401/class-reading-prework-dsa.md)
 1. [OSS Contributions](401/class-reading-class41.md)
 1. [React 4](401/class-reading-class42.md)
 1. [Pythonisms](401/class-reading-class43.md)
+
+---
+
+### **<i id="post_grad"></i>Post-Graduation** 
+
+1. [OpenCV](post_grad/opencv1.md)
+
 ---
 ---
 ---
