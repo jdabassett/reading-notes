@@ -4,19 +4,12 @@
 ---
 ---
 
-## Why are these reading important?
-
-```
-```
-
----
-
 ## [**OpenCV Examples:**](https://www.kaggle.com/code/bulentsiyah/learn-opencv-by-examples-with-python)
 
 #### [**Image Sharpening:**](https://www.kaggle.com/code/bulentsiyah/learn-opencv-by-examples-with-python?scriptVersionId=34321869&cellId=4)
 
 * WHY?
-* ChatGPT: Sharpening images with OpenCV or any other image processing library is a technique used to enhance the edges and details in an image. It is often employed to improve the visual quality of images and make them appear clearer and more defined. 
+* ChatGPT: Sharpening is a technique used to enhance the edges and details in an image. It is often employed to improve the visual quality of images and make them appear clearer and more defined. 
 
 ```python
 # import image
@@ -68,7 +61,8 @@ plt.title("Original")
 plt.imshow(image)
 
 # what, threshold is set by user and fixed
-# Values below 127 goes to 0 (black, everything above goes to 255 (white)
+# 127, below goes to 0
+# 255, everything above 127 goes to 255
 # returns tuple of threshold and new image
 ret,thresh1 = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY)
 
@@ -866,6 +860,139 @@ plt.title("FG Mask")
 plt.imshow(cv2.cvtColor(fgMask, cv2.COLOR_BGR2RGB))
 ```
 
+## [**freeCodeCamp Video**:](https://youtu.be/oXlwWbU8l2o?feature=shared)
+
+---
+
+#### [**Load Images or Videos:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=254)
+
+```python
+# read image
+img = cv.imread('./Resources/Photos/cats.jpg')
+# show window with image
+cv.imshow('Cats', img)
+# pause execution until keystroke
+cv.waitKey(0)
+
+# read video, can reference camera instead
+capture = cv.VideoCapture('./Resources/Videos/dog.mp4')
+
+while True:
+    isTrue, frame = capture.read()
+    
+    # This is the preferred way - if `isTrue` is false (the frame could 
+    # not be read, or we're at the end of the video), we immediately
+    # break from the loop. 
+    if isTrue:    
+        cv.imshow('Video', frame)
+        if cv.waitKey(20) & 0xFF==ord('d'):
+            break            
+    else:
+        break
+
+# close connection with video session
+capture.release()
+# close all windows
+cv.destroyAllWindows()
+```
+
+---
+
+#### [**Draw Shapes and Add text:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=1222)
+
+```python
+blank = np.zeros((500,500,3), dtype='uint8')
+cv.imshow('Blank', blank)
+
+# 1. Paint the image a certain colour
+blank[200:300, 300:400] = 0,255,0
+cv.imshow('Green', blank)
+
+# 2. Draw a Rectangle
+cv.rectangle(blank, (0,0), (blank.shape[1]//2, blank.shape[0]//2), (0,255,0), thickness=-1)
+cv.imshow('Rectangle', blank)
+
+# 3. Draw A circle
+cv.circle(blank, (blank.shape[1]//2, blank.shape[0]//2), 40, (0,0,255), thickness=-1)
+cv.imshow('Circle', blank)
+
+# 4. Draw a line
+cv.line(blank, (100,250), (300,400), (255,255,255), thickness=3)
+cv.imshow('Line', blank)
+
+# 5. Write text
+cv.putText(blank, 'Hello, my name is Jacob!!!', (0,225), cv.FONT_HERSHEY_TRIPLEX, 1.0, (0,255,0), 2)
+cv.imshow('Text', blank)
+
+cv.waitKey(0)
+```
+
+---
+
+#### [**Basic Functions:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=1916)
+
+```python
+img = cv.imread("./Resources/Photos/park.jpg")
+cv.imshow("Park", img)
+
+
+# Translation
+def translate(img, x, y):
+    # transformation matrix specifying the translation, scaling, rotation, and/or shear operations to be applied to the image.
+    transMat = np.float32([[1, 0, x], [0, 1, y]])
+    dimensions = (img.shape[1], img.shape[0])
+    # affine transformation preserve points, straight lines and planes
+    return cv.warpAffine(img, transMat, dimensions)
+
+
+translated = translate(img, -100, 100)
+cv.imshow("Translated", translated)
+
+cv.waitKey(0)
+
+# Rotation
+def rotate(img, angle, rotPoint=None):
+    (height, width) = img.shape[:2]
+
+    if rotPoint is None:
+        rotPoint = (width // 2, height // 2)
+
+    # generate matrix
+    # rotPoint, rotation origin
+    # angle, how far to rotate
+    # 1.0, keep scale the same
+    rotMat = cv.getRotationMatrix2D(rotPoint, angle, 1.0)
+    dimensions = (width, height)
+    # affine transformation preserve points, straight lines and planes  
+    return cv.warpAffine(img, rotMat, dimensions)
+
+
+rotated = rotate(img, -45)
+cv.imshow("Rotated", rotated)
+
+cv.waitKey(0)
+
+rotated_rotated = rotate(img, -90)
+cv.imshow("Rotated Rotated", rotated_rotated)
+
+cv.waitKey(0)
+
+# Resizing
+resized = cv.resize(img, (500, 500), interpolation=cv.INTER_CUBIC)
+cv.imshow("Resized", resized)
+
+# Flipping
+# 0: x-axis, 1: y-axis, -1: both
+flip = cv.flip(img, -1)
+cv.imshow("Flip", flip)
+
+# Cropping
+cropped = img[200:400, 300:400]
+cv.imshow("Cropped", cropped)
+
+cv.waitKey(0)
+```
+
 ---
 
 #### [**:**]()
@@ -878,16 +1005,33 @@ plt.imshow(cv2.cvtColor(fgMask, cv2.COLOR_BGR2RGB))
 
 ---
 
-## **Important Keywords**:
+#### [**:**]()
 
-| Keyword | Action |
-|-----------------|-----------------|
-| |  |
-| |  |
-| |  |
-| |  |
-| cv2.rectange() | draw rectangle on image in-place |
+* WHY?
+* ChatGPT: 
 
+```python
+```
+
+---
+
+#### [**:**]()
+
+* WHY?
+* ChatGPT: 
+
+```python
+```
+
+---
+
+#### [**:**]()
+
+* WHY?
+* ChatGPT: 
+
+```python
+```
 
 ---
 ---
