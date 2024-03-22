@@ -574,20 +574,16 @@ for c in contours:
 #### [**Draw shapes and write text to images:**]
 
 ```python
-image = cv2.imread('/kaggle/input/opencv-samples-images/someshapes.jpg')
+image = cv2.imread('/path.jpg')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 plt.figure(figsize=(20, 20))
-
 plt.subplot(2, 2, 1)
 plt.title("Original")
 plt.imshow(image)
 
 ret, thresh = cv2.threshold(gray, 127, 255, 1)
-
-# Extract Contours
 contours, hierarchy = cv2.findContours(thresh.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 
 for cnt in contours:
@@ -646,12 +642,228 @@ plt.imshow(image)
 
 ---
 
-#### [**:**]()
+#### [**Hough Lines:**](https://www.kaggle.com/code/bulentsiyah/learn-opencv-by-examples-with-python?scriptVersionId=34321869&cellId=28)
+
+* WHY?
+* ChatGPT: Hough lines is a technique to detect straight lines in an image. Efficient and good with noise
+
+```python
+image = cv2.imread('/path.png')
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+# see above
+edges = cv2.Canny(gray, 100, 170, apertureSize = 3)
+
+plt.figure(figsize=(20, 20))
+plt.subplot(2, 2, 1)
+plt.title("edges")
+plt.imshow(edges)
+
+# calculate HoughLines using a rho accuracy of 1 pixel
+# theta accuracy of np.pi / 180 which is 1 degree
+# threshold is set to 200points to make a line
+lines = cv2.HoughLines(edges, 1, np.pi/180, 200)
+
+# iterate through each line and convert it to the format
+# required by cv.lines (i.e. requiring end points)
+for line in lines:
+    rho, theta = line[0]
+    a = np.cos(theta)
+    b = np.sin(theta)
+    # point at origin
+    x0 = a * rho
+    y0 = b * rho
+    # points at ends (outside range of image)
+    # note they will be truncated when drawn
+    x1 = int(x0 + 1000 * (-b))
+    y1 = int(y0 + 1000 * (a))
+    x2 = int(x0 - 1000 * (-b))
+    y2 = int(y0 - 1000 * (a))
+    # draws line to image
+    # two points
+    # color of line and thickness
+    cv2.line(image, (x1, y1), (x2, y2), (255, 0, 0), 2)
+
+
+plt.subplot(2, 2, 2)
+plt.title("Hough Lines")
+plt.imshow(image)
+```
+
+---
+
+#### [**Counting Circles and Ellipses:**](https://www.kaggle.com/code/bulentsiyah/learn-opencv-by-examples-with-python?scriptVersionId=34321869&cellId=30)
+
+```python
+image = cv2.imread('/path.jpg')
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+plt.figure(figsize=(20, 20))
+
+# intialize the detector using the default parameters
+detector = cv2.SimpleBlobDetector_create()
+# detect blobs
+keypoints = detector.detect(image)
+ 
+# draw blobs on image as red circles
+blank = np.zeros((1,1)) 
+blobs = cv2.drawKeypoints(image, keypoints, blank, (0,0,255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+
+number_of_blobs = len(keypoints)
+text = "Total Number of Blobs: " + str(len(keypoints))
+cv2.putText(blobs, text, (20, 550), cv2.FONT_HERSHEY_SIMPLEX, 1, (100, 0, 255), 2)
+plt.subplot(2, 2, 1)
+plt.title("Blobs using default parameters")
+plt.imshow(blobs)
+
+# initialize parameter setting using cv2.SimpleBlobDetector
+params = cv2.SimpleBlobDetector_Params()
+# set Area filtering parameters
+params.filterByArea = True
+params.minArea = 100
+# set Circularity filtering parameters
+params.filterByCircularity = True 
+params.minCircularity = 0.9
+# set Convexity filtering parameters
+params.filterByConvexity = False
+params.minConvexity = 0.2
+# set inertia filtering parameters
+params.filterByInertia = True
+params.minInertiaRatio = 0.01
+
+# create a detector with the parameters
+detector = cv2.SimpleBlobDetector_create(params)
+    
+# detect blobs
+keypoints = detector.detect(image)
+
+# draw blobs on our image as red circles
+blank = np.zeros((1,1)) 
+blobs = cv2.drawKeypoints(image, keypoints, blank, (0,255,0), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+
+number_of_blobs = len(keypoints)
+text = "Number of Circular Blobs: " + str(len(keypoints))
+cv2.putText(blobs, text, (20, 550), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 100, 255), 2)
+plt.subplot(2, 2, 2)
+plt.title("Filtering Circular Blobs Only")
+plt.imshow(blobs)
+```
+
+---
+
+#### [**Finding Corners:**](https://www.kaggle.com/code/bulentsiyah/learn-opencv-by-examples-with-python?scriptVersionId=34321869&cellId=32)
+
+* WHY?
+* ChatGPT: Corner Harris is a corner detection algorithm.
+
+```python
+image = cv2.imread('/path.png')
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+plt.figure(figsize=(10, 10))
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+# cornerHarris requires the array datatype to be float32
+gray = np.float32(gray)
+# 3, size of region for sorbel operator for computing gradients
+# 3, size of sobel kernel for derivative computation
+# 0.05, from 0.04 to 0.06 were lower is less sensitive and higher is more sensitive for corner detection
+harris_corners = cv2.cornerHarris(gray, 3, 3, 0.05)
+
+# dilation of the corner points to enlarge them
+kernel = np.ones((7,7),np.uint8)
+harris_corners = cv2.dilate(harris_corners, kernel, iterations = 10)
+
+# threshold for an optimal value, it may vary depending on the image.
+image[harris_corners > 0.025 * harris_corners.max() ] = [255, 127, 127]
+
+plt.subplot(1, 1, 1)
+plt.title("Harris Corners")
+plt.imshow(image)
+```
+
+---
+
+#### [**Finding match:**]()
 
 * WHY?
 * ChatGPT: 
 
 ```python
+# import where's waldo image
+image = cv2.imread('/path.jpg')
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+plt.figure(figsize=(30, 30))
+plt.subplot(2, 2, 1)
+plt.title("Where is Waldo?")
+plt.imshow(image)
+
+# import grayscale image of waldo
+template = cv2.imread('/path.jpg',0)
+
+# find match
+result = cv2.matchTemplate(gray, template, cv2.TM_CCOEFF)
+
+# extract corners
+min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+top_left = max_loc
+bottom_right = (top_left[0] + 50, top_left[1] + 50)
+
+# draw box on image in-place
+cv2.rectangle(image, top_left, bottom_right, (0,0,255), 5)
+
+plt.subplot(2, 2, 2)
+plt.title("Waldo")
+plt.imshow(image)
+```
+
+---
+
+#### [**Background Subtraction:**](https://www.kaggle.com/code/bulentsiyah/learn-opencv-by-examples-with-python?scriptVersionId=34321869&cellId=36)
+
+* WHY?
+* ChatGPT: Background subtraction (BS) is a common and widely used technique for generating a foreground mask (namely, a binary image containing the pixels belonging to moving objects in the scene) by using static cameras.
+
+```python
+algo = 'MOG2'
+
+if algo == 'MOG2':
+    # mixture of gaussians
+    # better in mixed lighting or complex backgrounds
+    # more computationally expensive
+    backSub = cv2.createBackgroundSubtractorMOG2()
+else:
+    # k-nearest neighbors
+    # simpler and faster
+    # non-parametric
+    backSub = cv2.createBackgroundSubtractorKNN()
+
+plt.figure(figsize=(20, 20))
+frame = cv2.imread('/path.png')
+
+# apply filter
+fgMask = backSub.apply(frame)
+
+plt.subplot(2, 2, 1)
+plt.title("Frame")
+plt.imshow(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+
+plt.subplot(2, 2, 2)
+plt.title("FG Mask")
+plt.imshow(cv2.cvtColor(fgMask, cv2.COLOR_BGR2RGB))
+                       
+frame = cv2.imread('/path.png')
+
+# apply filter
+fgMask = backSub.apply(frame)
+
+plt.subplot(2, 2, 3)
+plt.title("Frame")
+plt.imshow(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+
+plt.subplot(2, 2, 4)
+plt.title("FG Mask")
+plt.imshow(cv2.cvtColor(fgMask, cv2.COLOR_BGR2RGB))
 ```
 
 ---
@@ -666,13 +878,16 @@ plt.imshow(image)
 
 ---
 
-#### [**:**]()
+## **Important Keywords**:
 
-* WHY?
-* ChatGPT: 
+| Keyword | Action |
+|-----------------|-----------------|
+| |  |
+| |  |
+| |  |
+| |  |
+| cv2.rectange() | draw rectangle on image in-place |
 
-```python
-```
 
 ---
 ---
