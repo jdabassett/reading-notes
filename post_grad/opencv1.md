@@ -25,7 +25,6 @@ plt.subplot(1, 2, 1)
 plt.title("Original")
 plt.imshow(image)
 
-
 # create kernel to apply as filter
 # won't normalize since values sum to 1
 kernel_sharpening = np.array([[-1,-1,-1], 
@@ -868,7 +867,7 @@ plt.imshow(cv2.cvtColor(fgMask, cv2.COLOR_BGR2RGB))
 
 ```python
 # read image
-img = cv.imread('./Resources/Photos/cats.jpg')
+img = cv.imread('./path.jpg')
 # show window with image
 cv.imshow('Cats', img)
 # pause execution until keystroke
@@ -902,29 +901,21 @@ cv.destroyAllWindows()
 
 ```python
 blank = np.zeros((500,500,3), dtype='uint8')
-cv.imshow('Blank', blank)
 
 # 1. Paint the image a certain colour
 blank[200:300, 300:400] = 0,255,0
-cv.imshow('Green', blank)
 
 # 2. Draw a Rectangle
 cv.rectangle(blank, (0,0), (blank.shape[1]//2, blank.shape[0]//2), (0,255,0), thickness=-1)
-cv.imshow('Rectangle', blank)
 
 # 3. Draw A circle
 cv.circle(blank, (blank.shape[1]//2, blank.shape[0]//2), 40, (0,0,255), thickness=-1)
-cv.imshow('Circle', blank)
 
 # 4. Draw a line
 cv.line(blank, (100,250), (300,400), (255,255,255), thickness=3)
-cv.imshow('Line', blank)
 
 # 5. Write text
 cv.putText(blank, 'Hello, my name is Jacob!!!', (0,225), cv.FONT_HERSHEY_TRIPLEX, 1.0, (0,255,0), 2)
-cv.imshow('Text', blank)
-
-cv.waitKey(0)
 ```
 
 ---
@@ -932,9 +923,7 @@ cv.waitKey(0)
 #### [**Basic Functions:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=1916)
 
 ```python
-img = cv.imread("./Resources/Photos/park.jpg")
-cv.imshow("Park", img)
-
+img = cv.imread("./path.jpg")
 
 # Translation
 def translate(img, x, y):
@@ -944,11 +933,7 @@ def translate(img, x, y):
     # affine transformation preserve points, straight lines and planes
     return cv.warpAffine(img, transMat, dimensions)
 
-
 translated = translate(img, -100, 100)
-cv.imshow("Translated", translated)
-
-cv.waitKey(0)
 
 # Rotation
 def rotate(img, angle, rotPoint=None):
@@ -966,31 +951,378 @@ def rotate(img, angle, rotPoint=None):
     # affine transformation preserve points, straight lines and planes  
     return cv.warpAffine(img, rotMat, dimensions)
 
-
 rotated = rotate(img, -45)
-cv.imshow("Rotated", rotated)
-
-cv.waitKey(0)
 
 rotated_rotated = rotate(img, -90)
-cv.imshow("Rotated Rotated", rotated_rotated)
-
-cv.waitKey(0)
 
 # Resizing
 resized = cv.resize(img, (500, 500), interpolation=cv.INTER_CUBIC)
-cv.imshow("Resized", resized)
 
 # Flipping
 # 0: x-axis, 1: y-axis, -1: both
 flip = cv.flip(img, -1)
-cv.imshow("Flip", flip)
 
 # Cropping
 cropped = img[200:400, 300:400]
-cv.imshow("Cropped", cropped)
+```
 
+---
+
+#### [**Contours:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=3430)
+
+```python
+img = cv.imread('./path.jpg')
+
+blank = np.zeros(img.shape, dtype='uint8')
+
+gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+
+# blur to reduce noise
+blur = cv.GaussianBlur(gray, (5,5), cv.BORDER_DEFAULT)
+
+# generate image with detected edges
+canny = cv.Canny(blur, 125, 175)
+
+# generate list of contours/points from image of edges
+contours, hierarchies = cv.findContours(canny, cv.RETR_LIST, cv.CHAIN_APPROX_SIMPLE)
+
+# draw countour points onto blank image
+cv.drawContours(blank, contours, -1, (0,0,255), 1)
+```
+
+---
+
+#### [**Convert between colors:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=4373)
+
+```python
+img = cv.imread('./path.jpg')
+
+# BGR to Grayscale
+gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+
+# BGR to HSV
+hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
+
+# BGR to L*a*b
+lab = cv.cvtColor(img, cv.COLOR_BGR2LAB)
+
+# BGR to RGB
+rgb = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+
+# HSV to BGR
+lab_bgr = cv.cvtColor(lab, cv.COLOR_LAB2BGR)
+```
+
+---
+
+#### [**Image Split and Merge:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=4994)
+
+* WHY?
+* ChatGPT: Separating out the different channels from one image. 
+
+```python
+img = cv.imread('./path.jpg')
+
+blank = np.zeros(img.shape[:2], dtype='uint8')
+
+b,g,r = cv.split(img)
+
+cv.imshow('Blue', b) # grayscale of only blue channel
+cv.imshow('Green', g) # grayscale of only green channel
+cv.imshow('Red', r) # grayscale of only red channel
+
+blue = cv.merge([b,blank,blank])
+green = cv.merge([blank,g,blank])
+red = cv.merge([blank,blank,r])
+
+cv.imshow('Blue', blue) # only blue channel
+cv.imshow('Green', green) # only green channel
+cv.imshow('Red', red) # only red channel
+
+print(img.shape) # (427, 640, 3)
+print(b.shape) # (427, 640)
+print(g.shape) # (427, 640)
+print(r.shape) # (427, 640)
+
+merged = cv.merge([b,g,r])
+cv.imshow('Merged Image', merged)
+```
+
+---
+
+#### [**Blur, Smoothing, and Averaging:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=5473)
+
+```python
+img = cv.imread('./path.jpg')
+
+# Averaging
+# applys average from kernel
+average = cv.blur(img, (3,3))
+
+# Gaussian Blur
+gauss = cv.GaussianBlur(img, (3,3), 0)
+
+# Median Blur
+# applys median from kernel
+median = cv.medianBlur(img, 3)
+
+# Bilateral, most common bluring
+# good at retaining edges while blurring
+# 10, size of kernel
+# 35, sigmaColor controls similarity between neighbors, smaller less smoothing
+# 25, sigmaSpace controls range of comparison
+bilateral = cv.bilateralFilter(img, 10, 35, 25)
+```
+
+---
+
+#### [**Bitwise Operators:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=6284)
+
+* WHY?
+* ChatGPT: Very important for generating masks.
+
+```python
+blank = np.zeros((400,400), dtype='uint8')
+
+rectangle = cv.rectangle(blank.copy(), (30,30), (370,370), 255, -1)
+circle = cv.circle(blank.copy(), (200,200), 200, 255, -1)
+
+cv.imshow('Rectangle', rectangle) # white rectangle with black background
+cv.imshow('Circle', circle) # white circle with black background
+
+bitwise_and = cv.bitwise_and(rectangle, circle)
+cv.imshow('Bitwise AND', bitwise_and) # white intersection of rectangle and circle
+
+bitwise_or = cv.bitwise_or(rectangle, circle)
+cv.imshow('Bitwise OR', bitwise_or) # white union of rectangle and circle
+
+bitwise_xor = cv.bitwise_xor(rectangle, circle)
+cv.imshow('Bitwise XOR', bitwise_xor) # white non-overlapping xor of rectangle and circle
+
+# bitwise NOT
+bitwise_not = cv.bitwise_not(circle)
+cv.imshow('Circle NOT', bitwise_not) # white background and black circle
+```
+
+---
+
+#### [**Masking:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=6786)
+
+* WHY?
+* ChatGPT: Selectively applying or removing certain parts of the image based on a binary mask. A mask is a binary image where pixels are either set to 0 (black) or 1 (white), indicating areas of interest or regions to be ignored.
+
+```python
+img = cv.imread('./path.jpg')
+
+blank = np.zeros(img.shape[:2], dtype='uint8')
+
+circle = cv.circle(blank.copy(), (img.shape[1]//2 + 45,img.shape[0]//2), 100, 255, -1)
+
+rectangle = cv.rectangle(blank.copy(), (30,30), (370,370), 255, -1)
+
+weird_shape = cv.bitwise_and(circle,rectangle)
+
+masked = cv.bitwise_and(img,img,mask=weird_shape)
+```
+
+---
+
+#### [**Color Channel Histogram:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=7307)
+
+* WHY?
+* ChatGPT: A color histogram for an image involves quantifying the distribution of colors present in the image across different color channels.The color histogram provides valuable insights into the color composition and distribution of the image.
+
+```python
+img = cv.imread('./path.jpg')
+
+blank = np.zeros(img.shape[:2], dtype='uint8')
+
+mask = cv.circle(blank, (img.shape[1]//2,img.shape[0]//2), 100, 255, -1)
+
+plt.figure()
+plt.title('Colour Histogram')
+plt.xlabel('Bins')
+plt.ylabel('# of pixels')
+colors = ('b', 'g', 'r')
+for i,col in enumerate(colors):
+    # [img], accepts list of images
+    # [i], specified channels
+    # mask, use mask or None
+    # [256], number of bins
+    # [0,256], range for bins
+    hist = cv.calcHist([img], [i], mask, [256], [0,256])
+    plt.plot(hist, color=col)
+    plt.xlim([0,256])
+
+plt.show()
+```
+
+---
+
+#### [**Thresholding:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=8122)
+
+* WHY?
+* ChatGPT: Segment images by dividing them into regions based on pixel intensity values. The process involves comparing each pixel value in an image to a threshold value and classifying the pixels as either foreground or background based on whether their intensity values are above or below the threshold.
+
+```python
+img = cv.imread('./path.jpg')
+
+gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+
+# 150, threshold intensity
+# 255, max intensity to reassign pixels
+# THRESH_BINARY, binary assignment method
+# THRESH_TRUNC, greater truncated down
+# THRESH_TOZERO, lesser reduced to zero
+threshold, thresh = cv.threshold(gray, 150, 255, cv.THRESH_BINARY )
+
+# THRESH_BINARY_INV, greater are set to 0, less than or equal unchanged
+threshold, thresh_inv = cv.threshold(gray, 150, 255, cv.THRESH_BINARY_INV )
+
+# ADAPTIVE_THRESH_GAUSSIAN_C, threshold is weighted sum of local minus constant
+# ADAPTIVE_THRESH_MEAN_C, threshold is mean of local minus constant
+# 11, block size of local 
+# 9, constant
+adaptive_thresh = cv.adaptiveThreshold(gray, 255, cv.ADAPTIVE_THRESH_GAUSSIAN_C, cv.THRESH_BINARY_INV, 11, 9)
+```
+
+---
+
+#### [**Edge Detection:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=8788)
+
+```python
+img = cv.imread('./path.jpg')
+
+gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+cv.imshow('Gray', gray)
 cv.waitKey(0)
+
+# Laplacian, compute gradients of image
+lap = cv.Laplacian(gray, cv.CV_64F)
+# convert to abs to visualize
+lap = np.uint8(np.absolute(lap))
+
+# Sobel, x axis gradients
+sobelx = cv.Sobel(gray, cv.CV_64F, 1, 0)
+# y axis gradients
+sobely = cv.Sobel(gray, cv.CV_64F, 0, 1)
+# combine x and y
+combined_sobel = cv.bitwise_or(sobelx, sobely)
+
+# find gradients/edge with Canny Algorithm
+canny = cv.Canny(gray, 150, 175)
+```
+
+---
+
+#### [**Face Detection:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=9327)
+
+* What is the difference between Haar Cascades and Local Binary Patterns?
+* ChatGPT: Both feature extraction techniques commonly used in object detection and recognition tasks.
+  * Haar cascades use a cascaded series of classifiers to detect objects based on the presence of specific Haar-like features at different scales and positions in an image. These classifiers are trained using machine learning techniques, such as the AdaBoost algorithm. Common for object detection, effective for distinct texture and shapes.
+  * LBP features are extracted by computing histograms of local binary patterns over regions of an image. These histograms capture the distribution of texture patterns in different regions of the image. Common for texture classification and objects with patterns.
+
+```python
+img = cv.imread('./path.jpg')
+
+gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+
+# create a haar cascade classifier instance
+# https://github.com/opencv/opencv/tree/4.x/data/haarcascades
+haar_cascade = cv.CascadeClassifier('./path/haar_face.xml')
+
+# detect multiple faces
+faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=1)
+
+print(f'Number of faces found = {len(faces_rect)}')
+
+for (x,y,w,h) in faces_rect:
+    cv.rectangle(img, (x,y), (x+w,y+h), (0,255,0), thickness=2)
+
+cv.imshow('Detected Faces', img)
+```
+
+---
+
+#### [**Face Recognition:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=10151)
+
+* WHY?
+* ChatGPT: 
+
+##### Training
+
+```python
+people = ['Ben Afflek', 'Elton John', 'Jerry Seinfield', 'Madonna', 'Mindy Kaling']
+DIR = r'/Users/jacobbassett/projects/courses/opencv/opencv-course/Resources/Faces/train'
+
+haar_cascade = cv.CascadeClassifier('./faces/haar_face.xml')
+
+features = []
+labels = []
+
+def create_train():
+    for idx, person in enumerate(people):
+        path = os.path.join(DIR, person)
+
+        for img in os.listdir(path):
+            img_path = os.path.join(path,img)
+
+            img_array = cv.imread(img_path)
+            if img_array is None:
+                continue 
+                
+            gray = cv.cvtColor(img_array, cv.COLOR_BGR2GRAY)
+
+            faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=4)
+
+            for (x,y,w,h) in faces_rect:
+                faces_roi = gray[y:y+h, x:x+w]
+                features.append(faces_roi)
+                labels.append(idx)
+
+create_train()
+print('Training done ---------------')
+
+features = np.array(features, dtype='object')
+labels = np.array(labels)
+
+face_recognizer = cv.face.LBPHFaceRecognizer_create()
+
+# Train the Recognizer on the features list and the labels list
+face_recognizer.train(features,labels)
+
+face_recognizer.save('./faces/face_trained.yml')
+np.save('./faces/features.npy', features)
+np.save('./faces/labels.npy', labels)
+```
+
+##### Facial Recognition
+
+```python
+haar_cascade = cv.CascadeClassifier('./faces/haar_face.xml')
+
+people = ['Ben Afflek', 'Elton John', 'Jerry Seinfield', 'Madonna', 'Mindy Kaling']
+
+face_recognizer = cv.face.LBPHFaceRecognizer_create()
+face_recognizer.read('./faces/face_trained.yml')
+
+img = cv.imread(r'./Resources/Faces/val/elton_john/1.jpg')
+
+gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+
+# Detect the face in the image
+faces_rect = haar_cascade.detectMultiScale(gray, 1.1, 4)
+
+for (x,y,w,h) in faces_rect:
+    faces_roi = gray[y:y+h,x:x+w]
+
+    label, confidence = face_recognizer.predict(faces_roi)
+    print(f'Label = {people[label]} with a confidence of {confidence}')
+
+    cv.putText(img, str(people[label]), (20,20), cv.FONT_HERSHEY_COMPLEX, 1.0, (0,255,0), thickness=2)
+    cv.rectangle(img, (x,y), (x+w,y+h), (0,255,0), thickness=2)
+
+cv.imshow('Detected Face', img)
 ```
 
 ---
