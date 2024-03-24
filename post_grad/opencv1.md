@@ -13,10 +13,10 @@
 
 ```python
 # import image
-image = cv2.imread('/path.jpg')
+image = cv.imread('/path.jpg')
 
 # convert to usagable version, rgb
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 
 # create figure
 plt.figure(figsize=(20, 20))
@@ -32,7 +32,7 @@ kernel_sharpening = np.array([[-1,-1,-1],
                               [-1,-1,-1]])
 
 # applying different kernels to the input image
-sharpened = cv2.filter2D(image, -1, kernel_sharpening)
+sharpened = cv.filter2D(image, -1, kernel_sharpening)
 
 # add new image to figure
 plt.subplot(1, 2, 2)
@@ -44,13 +44,14 @@ plt.show()
 ```
 
 #### [**Thresholding:**](https://www.kaggle.com/code/bulentsiyah/learn-opencv-by-examples-with-python?scriptVersionId=34321869&cellId=7)
+#### [**Second Source:**](https://youtu.be/CdltAssTMs8?feature=shared)
 
 * WHY?
 * ChatGPT:  To separate regions of interest in an image from the background or to highlight certain features.
 
 ```python
 # load image as grayscale
-image = cv2.imread('/path.jpg', 0)
+image = cv.imread('/path.jpg', 0)
 
 # create figure
 plt.figure(figsize=(30, 30))
@@ -63,7 +64,7 @@ plt.imshow(image)
 # 127, below goes to 0
 # 255, everything above 127 goes to 255
 # returns tuple of threshold and new image
-ret,thresh1 = cv2.threshold(image, 127, 255, cv2.THRESH_BINARY)
+ret,thresh1 = cv.threshold(image, 127, 255, cv.THRESH_BINARY)
 
 # add new image to figure
 plt.subplot(3, 2, 2)
@@ -74,7 +75,7 @@ plt.imshow(thresh1)
 # what, blur image to reduce noise
 # (3,3), larger kernel correlates to more blur
 # 0, std of gaussian distribution
-image = cv2.GaussianBlur(image, (3, 3), 0)
+image = cv.GaussianBlur(image, (3, 3), 0)
 
 # what, variable threshold applied by pixel's local region
 # 255, max value that can be assigned
@@ -82,7 +83,7 @@ image = cv2.GaussianBlur(image, (3, 3), 0)
 # THRESH_BINARY, type of threshold to be applied
 # 3, size of local region
 # 5, constant subtracted from calculated mean
-thresh = cv2.adaptiveThreshold(image, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 3, 5) 
+thresh = cv.adaptiveThreshold(image, 255, cv.ADAPTIVE_THRESH_MEAN_C, cv.THRESH_BINARY, 3, 5) 
 
 # add new image to figure
 plt.subplot(3, 2, 3)
@@ -95,7 +96,7 @@ plt.imshow(thresh)
 # BINARY, above set to 255, below set to 0
 # OTSU, threshold method to determine threshold
 # returns threshold value and new image
-_, th2 = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+_, th2 = cv.threshold(image, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
 
 # add image to figure
 plt.subplot(3, 2, 4)
@@ -106,9 +107,9 @@ plt.imshow(th2)
 plt.subplot(3, 2, 5)
 
 # see above
-blur = cv2.GaussianBlur(image, (5,5), 0)
+blur = cv.GaussianBlur(image, (5,5), 0)
 # see above, to demonstrate effect of blur
-_, th3 = cv2.threshold(blur, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+_, th3 = cv.threshold(blur, 0, 255, cv.THRESH_BINARY + cv.THRESH_OTSU)
 
 plt.title("Guassian Otsu's Thresholding")
 plt.imshow(th3)
@@ -125,8 +126,8 @@ plt.show()
 * ChatGPT: Two fundamental morphological operations used to manipulate images based on the shapes contained within them. 
 
 ```python
-image = cv2.imread('/kaggle/input/opencv-samples-images/data/LinuxLogo.jpg')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = cv.imread('/path.jpg')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 
 plt.figure(figsize=(20, 20))
 plt.subplot(3, 2, 1)
@@ -139,7 +140,7 @@ kernel = np.ones((5,5), np.uint8)
 
 # metaphor, think of an island surrounded by a rising sea
 # result, fewer lagoons, decreases object size
-erosion = cv2.erode(image, kernel, iterations = 1)
+erosion = cv.erode(image, kernel, iterations = 1)
 
 plt.subplot(3, 2, 2)
 plt.title("Erosion")
@@ -147,7 +148,7 @@ plt.imshow(erosion)
 
 # metaphor, think of an island in an upwell of the earths crust
 # result, more island features, increses object size
-dilation = cv2.dilate(image, kernel, iterations = 1)
+dilation = cv.dilate(image, kernel, iterations = 1)
 plt.subplot(3, 2, 3)
 plt.title("Dilation")
 plt.imshow(dilation)
@@ -155,7 +156,7 @@ plt.imshow(dilation)
 
 # opening, erosion followed by dilation
 # result, smooths boundaries while maintaining size
-opening = cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel)
+opening = cv.morphologyEx(image, cv.MORPH_OPEN, kernel)
 plt.subplot(3, 2, 4)
 plt.title("Opening")
 plt.imshow(opening)
@@ -163,7 +164,7 @@ plt.imshow(opening)
 
 # closing, dilation followed by erosion
 # result, close small holes or games while maintaining
-closing = cv2.morphologyEx(image, cv2.MORPH_CLOSE, kernel)
+closing = cv.morphologyEx(image, cv.MORPH_CLOSE, kernel)
 plt.subplot(3, 2, 5)
 plt.title("Closing")
 plt.imshow(closing)
@@ -177,11 +178,11 @@ plt.imshow(closing)
 * ChatGPT:  For feature detection, segmentation, and localization.
 
 ```python
-image = cv2.imread('/path.jpg')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = cv.imread('/path.jpg')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 
 # declare height, width, and channels from image
-height, width,_ = image.shape
+height, width, _ = image.shape
 
 # sorbel, edge detection
 # first-order derivative measuring rate of change directly
@@ -193,9 +194,9 @@ height, width,_ = image.shape
 # 0 and 1, specify direction
 # ksize, size of kernel/ local region
 # horizontally
-sobel_x = cv2.Sobel(image, cv2.CV_64F, 0, 1, ksize=5)
+sobel_x = cv.Sobel(image, cv.CV_64F, 0, 1, ksize=5)
 # vertically
-sobel_y = cv2.Sobel(image, cv2.CV_64F, 1, 0, ksize=5)
+sobel_y = cv.Sobel(image, cv.CV_64F, 1, 0, ksize=5)
 
 plt.figure(figsize=(20, 20))
 plt.subplot(3, 2, 1)
@@ -209,7 +210,7 @@ plt.title("Sobel Y")
 plt.imshow(sobel_y)
 
 # bitwise combine x and y
-sobel_OR = cv2.bitwise_or(sobel_x, sobel_y)
+sobel_OR = cv.bitwise_or(sobel_x, sobel_y)
 
 plt.subplot(3, 2, 4)
 plt.title("sobel_OR")
@@ -222,7 +223,7 @@ plt.imshow(sobel_OR)
 # more computationally expensive
 
 # CV_64F, depth of output image
-laplacian = cv2.Laplacian(image, cv2.CV_64F)
+laplacian = cv.Laplacian(image, cv.CV_64F)
 
 plt.subplot(3, 2, 5)
 plt.title("Laplacian")
@@ -235,11 +236,13 @@ plt.imshow(laplacian)
 
 # 50, lower threshold, below which edges won't be detected
 # 120, upper threshold, any pixel above and already a good candidate is more heavily weighted as an edge
-canny = cv2.Canny(image, 50, 120)
+canny = cv.Canny(image, 50, 120)
 
 plt.subplot(3, 2, 6)
 plt.title("Canny")
 plt.imshow(canny)
+
+plt.show()
 ```
 
 ---
@@ -250,8 +253,8 @@ plt.imshow(canny)
 * ChatGPT: Accomodate analysis from different viewpoints or perspectives. 
 
 ```python
-image = cv2.imread('/path.jpg')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = cv.imread('/path.jpg')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 
 plt.figure(figsize=(20, 20))
 plt.subplot(1, 2, 1)
@@ -266,13 +269,13 @@ points_B = np.float32([[0,0], [420,0], [0,594], [420,594]])
  
 # Use the two sets of four points to compute 
 # the Perspective Transformation matrix, M    
-M = cv2.getPerspectiveTransform(points_A, points_B)
+M = cv.getPerspectiveTransform(points_A, points_B)
  
 # what, perspective transformation on image
 # M, transformation matrix mapping pixel inputs and outputs
 # (420, 594), size of output
 # return, new image
-warped = cv2.warpPerspective(image, M, (420,594))
+warped = cv.warpPerspective(image, M, (420,594))
 
 plt.subplot(1, 2, 2)
 plt.title("warpPerspective")
@@ -287,8 +290,8 @@ plt.imshow(warped)
 * ChatGPT: To further processing.
 
 ```python
-image = cv2.imread('/path.jpg')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = cv.imread('/path.jpg')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 
 plt.figure(figsize=(20, 20))
 plt.subplot(2, 2, 1)
@@ -297,7 +300,7 @@ plt.imshow(image)
 
 # what, resize image to 75% 
 # None, could specify output size instead
-image_scaled = cv2.resize(image, None, fx=0.75, fy=0.75)
+image_scaled = cv.resize(image, None, fx=0.75, fy=0.75)
 
 plt.subplot(2, 2, 2)
 plt.title("Scaling - Linear Interpolation")
@@ -305,7 +308,7 @@ plt.imshow(image_scaled)
 
 # what, resize image to 200%
 # INTER_CUBIC, bicubic interpolation method
-img_scaled = cv2.resize(image, None, fx=2, fy=2, interpolation = cv2.INTER_CUBIC)
+img_scaled = cv.resize(image, None, fx=2, fy=2, interpolation = cv.INTER_CUBIC)
 
 plt.subplot(2, 2, 3)
 plt.title("Scaling - Cubic Interpolation")
@@ -313,7 +316,7 @@ plt.imshow(img_scaled)
 
 # (900,400), setting output size instead
 # INTER_AREA, often for image downsizing
-img_scaled = cv2.resize(image, (900, 400), interpolation = cv2.INTER_AREA)
+img_scaled = cv.resize(image, (900, 400), interpolation = cv.INTER_AREA)
 
 plt.subplot(2, 2, 4)
 plt.title("Scaling - Skewed Size")
@@ -328,8 +331,8 @@ plt.imshow(img_scaled)
 * ChatGPT:  Image pyramids are multi-scale representations of an image typically generated by iteratively apply a series of actions to produce a heirarchy of images with progressively reduced resolution.
 
 ```python
-image = cv2.imread('/path.jpg')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = cv.imread('/path.jpg')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 
 plt.figure(figsize=(20, 20))
 plt.subplot(2, 2, 1)
@@ -339,10 +342,10 @@ plt.imshow(image)
 # what, gaussian pyramid construction and manipulation methods
 
 # how, blur then downsampling to create lower resolution version
-smaller = cv2.pyrDown(image)
+smaller = cv.pyrDown(image)
 
 # how, upsampling then blur to create a higher resolution version
-larger = cv2.pyrUp(smaller)
+larger = cv.pyrUp(smaller)
 
 plt.subplot(2, 2, 2)
 plt.title("Smaller")
@@ -361,8 +364,8 @@ plt.imshow(larger)
 * ChatGPT:  Image processing.
 
 ```python
-image = cv2.imread('/path.jpg')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = cv.imread('/path.jpg')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 
 plt.figure(figsize=(20, 20))
 plt.subplot(2, 2, 1)
@@ -392,8 +395,8 @@ plt.imshow(cropped)
 * ChatGPT: Image processing to reduce noise or selectively reduce focus from areas of disinterest towards those of interest. 
 
 ```python
-image = cv2.imread('/kaggle/path.jpg')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = cv.imread('/kaggle/path.jpg')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 
 plt.figure(figsize=(20, 20))
 plt.subplot(2, 2, 1)
@@ -408,7 +411,7 @@ kernel_3x3 = np.ones((3, 3), np.float32) / 9
 # kernel applied to image
 # -1, specifies depth of output 
 # larger kernels coorelate to more blur
-blurred = cv2.filter2D(image, -1, kernel_3x3)
+blurred = cv.filter2D(image, -1, kernel_3x3)
 
 plt.subplot(2, 2, 2)
 plt.title("3x3 Kernel Blurring")
@@ -417,7 +420,7 @@ plt.imshow(blurred)
 # larger kernel
 kernel_7x7 = np.ones((7, 7), np.float32) / 49
 # more blur
-blurred2 = cv2.filter2D(image, -1, kernel_7x7)
+blurred2 = cv.filter2D(image, -1, kernel_7x7)
 
 plt.subplot(2, 2, 3)
 plt.title("7x7 Kernel Blurring")
@@ -433,8 +436,8 @@ plt.imshow(blurred2)
 
 ```python
 # Let's load a simple image with 3 black squares
-image = cv2.imread('/path.png')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = cv.imread('/path.png')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 
 plt.figure(figsize=(20, 20))
 plt.subplot(2, 2, 1)
@@ -442,12 +445,12 @@ plt.title("Original")
 plt.imshow(image)
 
 # convet from BGR to grayscale
-gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
+gray = cv.cvtColor(image,cv.COLOR_BGR2GRAY)
 
 # canny, edge detection
 # see above
 # returns, binary image
-edged = cv2.Canny(gray, 30, 200)
+edged = cv.Canny(gray, 30, 200)
 
 plt.subplot(2, 2, 2)
 plt.title("Canny Edges")
@@ -457,7 +460,7 @@ plt.imshow(edged)
 # RETR_EXTERNAL, retrieval mode of contours, external/outer boundary of objects
 # CHAIN_APPROX_NONE, stored in output contours list
 # return, list of contours/points found and optional output to determine grouping and nesting
-contours, hierarchy = cv2.findContours(edged, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+contours, hierarchy = cv.findContours(edged, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_NONE)
 
 plt.subplot(2, 2, 3)
 plt.title("Canny Edges After Contouring")
@@ -470,7 +473,7 @@ print("Number of Contours found = " + str(len(contours)))
 # (0,255,0), color to draw/store them
 # 3, pixel width
 # in-place
-cv2.drawContours(image, contours, -1, (0,255,0), 3)
+cv.drawContours(image, contours, -1, (0,255,0), 3)
 
 plt.subplot(2, 2, 4)
 plt.title("Contours")
@@ -485,8 +488,8 @@ plt.imshow(image)
 * ChatGPT: Convex hull is a polygon that encloses a set of points. Often representing the outermost contours of an image.
 
 ```python
-image = cv2.imread('/path.jpg')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = cv.imread('/path.jpg')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 
 plt.figure(figsize=(20, 20))
 plt.subplot(2, 2, 1)
@@ -497,35 +500,35 @@ plt.imshow(image)
 orig_image = image.copy()
 
 # convert to grayscale and segment through threshold
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-ret, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY_INV)
+gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
+ret, thresh = cv.threshold(gray, 127, 255, cv.THRESH_BINARY_INV)
 
 # find contours, see above
-contours, hierarchy = cv2.findContours(thresh.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
+contours, hierarchy = cv.findContours(thresh.copy(), cv.RETR_LIST, cv.CHAIN_APPROX_NONE)
 
 # iterate through each contour and compute the bounding rectangle
 for c in contours:
     # returns tuple of bounded rect for each object
-    x,y,w,h = cv2.boundingRect(c)
+    x,y,w,h = cv.boundingRect(c)
     # draws rectangle on copy
-    cv2.rectangle(orig_image,(x,y),(x+w,y+h),(0,0,255),2)
+    cv.rectangle(orig_image,(x,y),(x+w,y+h),(0,0,255),2)
 
     plt.subplot(2, 2, 2)
     plt.title("Bounding Rectangle")
     plt.imshow(orig_image)
 
 # halt execution until keyboard event, 0=indefinitely
-cv2.waitKey(0) 
+cv.waitKey(0) 
     
 # iterate through each contour and compute the approx contour
 for c in contours:
     # calculate accuracy as a percent of the contour perimeter(3%)
-    accuracy = 0.03 * cv2.arcLength(c, True)
+    accuracy = 0.03 * cv.arcLength(c, True)
     # simplified polygon computed
     # approximate polygon douglas-peucker algorithm
-    approx = cv2.approxPolyDP(c, accuracy, True)
+    approx = cv.approxPolyDP(c, accuracy, True)
     # draw to image
-    cv2.drawContours(image, [approx], 0, (0, 255, 0), 2)
+    cv.drawContours(image, [approx], 0, (0, 255, 0), 2)
     
     plt.subplot(2, 2, 3)
     plt.title("Approx Poly DP")
@@ -534,99 +537,103 @@ for c in contours:
 plt.show()
     
 # Convex Hull
-image = cv2.imread('/path.jpg')
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+image = cv.imread('/path.jpg')
+gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 
 plt.figure(figsize=(20, 20))
 plt.subplot(1, 2, 1)
 plt.title("Original Image")
 plt.imshow(image)
 
-ret, thresh = cv2.threshold(gray, 176, 255, 0)
-contours, hierarchy = cv2.findContours(thresh.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
+ret, thresh = cv.threshold(gray, 176, 255, 0)
+contours, hierarchy = cv.findContours(thresh.copy(), cv.RETR_LIST, cv.CHAIN_APPROX_NONE)
     
 # sort contours by area and then remove the largest frame contour
 n = len(contours) - 1
-contours = sorted(contours, key=cv2.contourArea, reverse=False)[:n]
+contours = sorted(contours, key=cv.contourArea, reverse=False)[:n]
 
 # Iterate through contours and draw the convex hull
 for c in contours:
     # computes comvex hull
     # encloses the contour while being convex, no internal angles > 180deg
-    hull = cv2.convexHull(c)
+    hull = cv.convexHull(c)
     # drawn onto image, in-place
-    cv2.drawContours(image, [hull], 0, (0, 255, 0), 2)
+    cv.drawContours(image, [hull], 0, (0, 255, 0), 2)
 
     plt.subplot(1, 2, 2)
     plt.title("Convex Hull")
     plt.imshow(image)
 ```
 
+Between the findContours() and drawContours() functions in OpenCV, there are several useful functions that can be applied to manipulate or process the contours or the image. Some common functions include:
+
+* cv.contourArea(): This function calculates the area of a contour.
+
+* cv.arcLength(): This function calculates the perimeter (arc length) of a contour.
+
+* cv.convexHull(): This function finds the convex hull of a contour.
+
+* cv.boundingRect(): This function calculates the bounding rectangle of a contour.
+
+* cv.minAreaRect(): This function calculates the minimum area rectangle that encloses a contour.
+
+* cv.minEnclosingCircle(): This function calculates the minimum enclosing circle of a contour.
+
+* cv.fitEllipse(): This function fits an ellipse to a contour.
+
+* cv.matchShapes(): This function calculates the similarity between two shapes or contours.
+
+* cv.fillPoly(): This function fills the interior of contours.
+
 ---
 
 #### [**Draw shapes and write text to images:**]
 
 ```python
-image = cv2.imread('/path.jpg')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+image = cv.imread('/path.jpg')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
+gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 
 plt.figure(figsize=(20, 20))
 plt.subplot(2, 2, 1)
 plt.title("Original")
 plt.imshow(image)
 
-ret, thresh = cv2.threshold(gray, 127, 255, 1)
-contours, hierarchy = cv2.findContours(thresh.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
+ret, thresh = cv.threshold(gray, 127, 255, 1)
+contours, hierarchy = cv.findContours(thresh.copy(), cv.RETR_LIST, cv.CHAIN_APPROX_NONE)
 
 for cnt in contours:
     # get approximate polygons
-    approx = cv2.approxPolyDP(cnt, 0.01*cv2.arcLength(cnt,True),True)
+    approx = cv.approxPolyDP(cnt, 0.01*cv.arcLength(cnt,True),True)
+    # find contour center to place text at the center
+    M = cv.moments(cnt)
+    cx = int(M['m10'] / M['m00'])
+    cy = int(M['m01'] / M['m00'])
+
     if len(approx) == 3:
-        shape_name = "Triangle"
-        cv2.drawContours(image,[cnt],0,(0,255,0),-1)
-        # find contour center to place text at the center
-        M = cv2.moments(cnt)
-        cx = int(M['m10'] / M['m00'])
-        cy = int(M['m01'] / M['m00'])
-        cv2.putText(image, shape_name, (cx-50, cy), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+        cv.drawContours(image,[cnt],0,(0,255,0),-1)
+        cv.putText(image, "Triangle", (cx-50, cy), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
     
     elif len(approx) == 4:
-        x,y,w,h = cv2.boundingRect(cnt)
-        M = cv2.moments(cnt)
-        cx = int(M['m10'] / M['m00'])
-        cy = int(M['m01'] / M['m00'])
+        x,y,w,h = cv.boundingRect(cnt)
         # check to see if 4-side polygon is square or rectangle
-        # cv2.boundingRect returns the top left and then width and 
+        # cv.boundingRect returns the top left and then width and 
         if abs(w-h) <= 3:
-            shape_name = "Square"
             # find contour center to place text at the center
-            cv2.drawContours(image, [cnt], 0, (0, 125 ,255), -1)
-            cv2.putText(image, shape_name, (cx-50, cy), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+            cv.drawContours(image, [cnt], 0, (0, 125 ,255), -1)
+            cv.putText(image, "Square", (cx-50, cy), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
         else:
-            shape_name = "Rectangle"
             # find contour center to place text at the center
-            cv2.drawContours(image, [cnt], 0, (0, 0, 255), -1)
-            M = cv2.moments(cnt)
-            cx = int(M['m10'] / M['m00'])
-            cy = int(M['m01'] / M['m00'])
-            cv2.putText(image, shape_name, (cx-50, cy), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+            cv.drawContours(image, [cnt], 0, (0, 0, 255), -1)
+            cv.putText(image, "Rectangle", (cx-50, cy), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
             
     elif len(approx) == 10:
-        shape_name = "Star"
-        cv2.drawContours(image, [cnt], 0, (255, 255, 0), -1)
-        M = cv2.moments(cnt)
-        cx = int(M['m10'] / M['m00'])
-        cy = int(M['m01'] / M['m00'])
-        cv2.putText(image, shape_name, (cx-50, cy), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+        cv.drawContours(image, [cnt], 0, (255, 255, 0), -1)
+        cv.putText(image, "Star", (cx-50, cy), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
         
     elif len(approx) >= 15:
-        shape_name = "Circle"
-        cv2.drawContours(image, [cnt], 0, (0, 255, 255), -1)
-        M = cv2.moments(cnt)
-        cx = int(M['m10'] / M['m00'])
-        cy = int(M['m01'] / M['m00'])
-        cv2.putText(image, shape_name, (cx-50, cy), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
+        cv.drawContours(image, [cnt], 0, (0, 255, 255), -1)
+        cv.putText(image, "Circle", (cx-50, cy), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
 
 plt.subplot(2, 2, 2)
 plt.title("Identifying Shapes")
@@ -641,11 +648,11 @@ plt.imshow(image)
 * ChatGPT: Hough lines is a technique to detect straight lines in an image. Efficient and good with noise
 
 ```python
-image = cv2.imread('/path.png')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+image = cv.imread('/path.png')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
+gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 # see above
-edges = cv2.Canny(gray, 100, 170, apertureSize = 3)
+edges = cv.Canny(gray, 100, 170, apertureSize = 3)
 
 plt.figure(figsize=(20, 20))
 plt.subplot(2, 2, 1)
@@ -655,7 +662,7 @@ plt.imshow(edges)
 # calculate HoughLines using a rho accuracy of 1 pixel
 # theta accuracy of np.pi / 180 which is 1 degree
 # threshold is set to 200points to make a line
-lines = cv2.HoughLines(edges, 1, np.pi/180, 200)
+lines = cv.HoughLines(edges, 1, np.pi/180, 200)
 
 # iterate through each line and convert it to the format
 # required by cv.lines (i.e. requiring end points)
@@ -675,7 +682,7 @@ for line in lines:
     # draws line to image
     # two points
     # color of line and thickness
-    cv2.line(image, (x1, y1), (x2, y2), (255, 0, 0), 2)
+    cv.line(image, (x1, y1), (x2, y2), (255, 0, 0), 2)
 
 
 plt.subplot(2, 2, 2)
@@ -688,28 +695,28 @@ plt.imshow(image)
 #### [**Counting Circles and Ellipses:**](https://www.kaggle.com/code/bulentsiyah/learn-opencv-by-examples-with-python?scriptVersionId=34321869&cellId=30)
 
 ```python
-image = cv2.imread('/path.jpg')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = cv.imread('/path.jpg')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 plt.figure(figsize=(20, 20))
 
 # intialize the detector using the default parameters
-detector = cv2.SimpleBlobDetector_create()
+detector = cv.SimpleBlobDetector_create()
 # detect blobs
 keypoints = detector.detect(image)
  
 # draw blobs on image as red circles
 blank = np.zeros((1,1)) 
-blobs = cv2.drawKeypoints(image, keypoints, blank, (0,0,255), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+blobs = cv.drawKeypoints(image, keypoints, blank, (0,0,255), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
 
 number_of_blobs = len(keypoints)
 text = "Total Number of Blobs: " + str(len(keypoints))
-cv2.putText(blobs, text, (20, 550), cv2.FONT_HERSHEY_SIMPLEX, 1, (100, 0, 255), 2)
+cv.putText(blobs, text, (20, 550), cv.FONT_HERSHEY_SIMPLEX, 1, (100, 0, 255), 2)
 plt.subplot(2, 2, 1)
 plt.title("Blobs using default parameters")
 plt.imshow(blobs)
 
-# initialize parameter setting using cv2.SimpleBlobDetector
-params = cv2.SimpleBlobDetector_Params()
+# initialize parameter setting using cv.SimpleBlobDetector
+params = cv.SimpleBlobDetector_Params()
 # set Area filtering parameters
 params.filterByArea = True
 params.minArea = 100
@@ -724,18 +731,18 @@ params.filterByInertia = True
 params.minInertiaRatio = 0.01
 
 # create a detector with the parameters
-detector = cv2.SimpleBlobDetector_create(params)
+detector = cv.SimpleBlobDetector_create(params)
     
 # detect blobs
 keypoints = detector.detect(image)
 
 # draw blobs on our image as red circles
 blank = np.zeros((1,1)) 
-blobs = cv2.drawKeypoints(image, keypoints, blank, (0,255,0), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+blobs = cv.drawKeypoints(image, keypoints, blank, (0,255,0), cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
 
 number_of_blobs = len(keypoints)
 text = "Number of Circular Blobs: " + str(len(keypoints))
-cv2.putText(blobs, text, (20, 550), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 100, 255), 2)
+cv.putText(blobs, text, (20, 550), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 100, 255), 2)
 plt.subplot(2, 2, 2)
 plt.title("Filtering Circular Blobs Only")
 plt.imshow(blobs)
@@ -749,21 +756,21 @@ plt.imshow(blobs)
 * ChatGPT: Corner Harris is a corner detection algorithm.
 
 ```python
-image = cv2.imread('/path.png')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = cv.imread('/path.png')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
 plt.figure(figsize=(10, 10))
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 
 # cornerHarris requires the array datatype to be float32
 gray = np.float32(gray)
 # 3, size of region for sorbel operator for computing gradients
 # 3, size of sobel kernel for derivative computation
 # 0.05, from 0.04 to 0.06 were lower is less sensitive and higher is more sensitive for corner detection
-harris_corners = cv2.cornerHarris(gray, 3, 3, 0.05)
+harris_corners = cv.cornerHarris(gray, 3, 3, 0.05)
 
 # dilation of the corner points to enlarge them
 kernel = np.ones((7,7),np.uint8)
-harris_corners = cv2.dilate(harris_corners, kernel, iterations = 10)
+harris_corners = cv.dilate(harris_corners, kernel, iterations = 10)
 
 # threshold for an optimal value, it may vary depending on the image.
 image[harris_corners > 0.025 * harris_corners.max() ] = [255, 127, 127]
@@ -777,14 +784,11 @@ plt.imshow(image)
 
 #### [**Finding match:**]()
 
-* WHY?
-* ChatGPT: 
-
 ```python
 # import where's waldo image
-image = cv2.imread('/path.jpg')
-image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+image = cv.imread('/path.jpg')
+image = cv.cvtColor(image, cv.COLOR_BGR2RGB)
+gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
 
 plt.figure(figsize=(30, 30))
 plt.subplot(2, 2, 1)
@@ -792,18 +796,18 @@ plt.title("Where is Waldo?")
 plt.imshow(image)
 
 # import grayscale image of waldo
-template = cv2.imread('/path.jpg',0)
+template = cv.imread('/path.jpg',0)
 
 # find match
-result = cv2.matchTemplate(gray, template, cv2.TM_CCOEFF)
+result = cv.matchTemplate(gray, template, cv.TM_CCOEFF)
 
 # extract corners
-min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
+min_val, max_val, min_loc, max_loc = cv.minMaxLoc(result)
 top_left = max_loc
 bottom_right = (top_left[0] + 50, top_left[1] + 50)
 
 # draw box on image in-place
-cv2.rectangle(image, top_left, bottom_right, (0,0,255), 5)
+cv.rectangle(image, top_left, bottom_right, (0,0,255), 5)
 
 plt.subplot(2, 2, 2)
 plt.title("Waldo")
@@ -824,39 +828,39 @@ if algo == 'MOG2':
     # mixture of gaussians
     # better in mixed lighting or complex backgrounds
     # more computationally expensive
-    backSub = cv2.createBackgroundSubtractorMOG2()
+    backSub = cv.createBackgroundSubtractorMOG2()
 else:
     # k-nearest neighbors
     # simpler and faster
     # non-parametric
-    backSub = cv2.createBackgroundSubtractorKNN()
+    backSub = cv.createBackgroundSubtractorKNN()
 
 plt.figure(figsize=(20, 20))
-frame = cv2.imread('/path.png')
+frame = cv.imread('/path.png')
 
 # apply filter
 fgMask = backSub.apply(frame)
 
 plt.subplot(2, 2, 1)
 plt.title("Frame")
-plt.imshow(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+plt.imshow(cv.cvtColor(frame, cv.COLOR_BGR2RGB))
 
 plt.subplot(2, 2, 2)
 plt.title("FG Mask")
-plt.imshow(cv2.cvtColor(fgMask, cv2.COLOR_BGR2RGB))
+plt.imshow(cv.cvtColor(fgMask, cv.COLOR_BGR2RGB))
                        
-frame = cv2.imread('/path.png')
+frame = cv.imread('/path.png')
 
 # apply filter
 fgMask = backSub.apply(frame)
 
 plt.subplot(2, 2, 3)
 plt.title("Frame")
-plt.imshow(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
+plt.imshow(cv.cvtColor(frame, cv.COLOR_BGR2RGB))
 
 plt.subplot(2, 2, 4)
 plt.title("FG Mask")
-plt.imshow(cv2.cvtColor(fgMask, cv2.COLOR_BGR2RGB))
+plt.imshow(cv.cvtColor(fgMask, cv.COLOR_BGR2RGB))
 ```
 
 ## [**freeCodeCamp Video**:](https://youtu.be/oXlwWbU8l2o?feature=shared)
@@ -864,6 +868,8 @@ plt.imshow(cv2.cvtColor(fgMask, cv2.COLOR_BGR2RGB))
 ---
 
 #### [**Load Images or Videos:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=254)
+
+#### [**Second source:**](https://youtu.be/-RtVZsCvXAQ?feature=shared)
 
 ```python
 # read image
@@ -873,31 +879,48 @@ cv.imshow('Cats', img)
 # pause execution until keystroke
 cv.waitKey(0)
 
-# read video, can reference camera instead
-capture = cv.VideoCapture('./Resources/Videos/dog.mp4')
+# Reading Videos
+capture = cv.VideoCapture('./path.mp4')
+fourcc = cv.VideoWriter_fourcc(*'XVID')
+output = cv.VideoWriter('output.avi',fourcc, 20.0, (640,480))
 
+old_width = int(capture.get(cv.CAP_PROP_FRAME_WIDTH))
+old_height = int(capture.get(cv.CAP_PROP_FRAME_HEIGHT))
+
+new_height = 480  
+new_width = int((new_height / old_height)*old_width)
+
+# loop through video
 while True:
     isTrue, frame = capture.read()
     
+    # if cv.waitKey(20) & 0xFF==ord('d'):
     # This is the preferred way - if `isTrue` is false (the frame could 
     # not be read, or we're at the end of the video), we immediately
     # break from the loop. 
     if isTrue:    
-        cv.imshow('Video', frame)
+        # resize
+        frame_resized = cv.resize(frame, (new_width, new_height))
+        # save to output video
+        output.write(frame_resized)
+        # show
+        cv.imshow('Video', frame_resized)
+        # cancel at d keystroke
         if cv.waitKey(20) & 0xFF==ord('d'):
             break            
     else:
         break
 
-# close connection with video session
 capture.release()
-# close all windows
+output.release()
 cv.destroyAllWindows()
 ```
 
 ---
 
 #### [**Draw Shapes and Add text:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=1222)
+
+#### [**Second Source:**](https://youtu.be/V1aMDD5583k?feature=shared)
 
 ```python
 blank = np.zeros((500,500,3), dtype='uint8')
@@ -1108,6 +1131,8 @@ cv.imshow('Circle NOT', bitwise_not) # white background and black circle
 
 #### [**Masking:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=6786)
 
+#### [**Second Source:**](https://youtu.be/mc846qb0ngk?feature=shared)
+
 * WHY?
 * ChatGPT: Selectively applying or removing certain parts of the image based on a binary mask. A mask is a binary image where pixels are either set to 0 (black) or 1 (white), indicating areas of interest or regions to be ignored.
 
@@ -1144,6 +1169,7 @@ plt.title('Colour Histogram')
 plt.xlabel('Bins')
 plt.ylabel('# of pixels')
 colors = ('b', 'g', 'r')
+
 for i,col in enumerate(colors):
     # [img], accepts list of images
     # [i], specified channels
@@ -1246,9 +1272,6 @@ cv.imshow('Detected Faces', img)
 
 #### [**Face Recognition:**](https://youtu.be/oXlwWbU8l2o?feature=shared&t=10151)
 
-* WHY?
-* ChatGPT: 
-
 ##### Training
 
 ```python
@@ -1326,22 +1349,84 @@ cv.imshow('Detected Face', img)
 
 ---
 
-#### [**:**]()
+#### [**Mouse Events:**](https://youtu.be/rrh-4NtuK-w?feature=shared)
+
+#### [**Second Source:**](https://youtu.be/a7_dBO3EAng?feature=shared)
 
 * WHY?
-* ChatGPT: 
+* ChatGPT: You can extract image data based on mouse events.
 
 ```python
+def click_event(event, x, y, flags, param):
+    font = cv.FONT_HERSHEY_SIMPLEX
+    # displays coordinates on left click
+    if event == cv.EVENT_LBUTTONDOWN:
+        strXY = str(x) + ', '+ str(y)
+        cv.putText(img, strXY, (x, y), font, .5, (255, 255, 0), 2)
+        cv.imshow('image', img)
+    # displays rgb on right click
+    if event == cv.EVENT_RBUTTONDOWN:
+        blue, green, red, = img[y, x, 0], img[y, x, 1], img[y, x, 2]
+        strBGR = str(blue) + ', '+ str(green)+ ', '+ str(red)
+        cv.putText(img, strBGR, (x, y), font, .5, (0, 255, 255), 2)
+        cv.imshow('image', img)
+
+img = cv.imread('path.jpg')
+cv.imshow('image', img)
+
+cv.setMouseCallback('image', click_event)
+
+cv.waitKey(0)
+cv.destroyAllWindows()
 ```
 
 ---
 
-#### [**:**]()
+#### [**Track Bar:**](https://youtu.be/3D7O_kZi8-o?feature=shared)
 
-* WHY?
-* ChatGPT: 
+* WHAT: Open a tracking window to change the mask and filter the image.
 
 ```python
+def nothing(x):
+    pass
+
+cv.namedWindow("Tracking")
+cv.createTrackbar("LH", "Tracking", 0, 255, nothing)
+cv.createTrackbar("LS", "Tracking", 0, 255, nothing)
+cv.createTrackbar("LV", "Tracking", 0, 255, nothing)
+cv.createTrackbar("UH", "Tracking", 255, 255, nothing)
+cv.createTrackbar("US", "Tracking", 255, 255, nothing)
+cv.createTrackbar("UV", "Tracking", 255, 255, nothing)
+
+while True:
+    frame = cv.imread('path.png')
+
+    hsv = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
+
+    l_h = cv.getTrackbarPos("LH", "Tracking")
+    l_s = cv.getTrackbarPos("LS", "Tracking")
+    l_v = cv.getTrackbarPos("LV", "Tracking")
+
+    u_h = cv.getTrackbarPos("UH", "Tracking")
+    u_s = cv.getTrackbarPos("US", "Tracking")
+    u_v = cv.getTrackbarPos("UV", "Tracking")
+
+    l_b = np.array([l_h, l_s, l_v])
+    u_b = np.array([u_h, u_s, u_v])
+
+    mask = cv.inRange(hsv, l_b, u_b)
+
+    res = cv.bitwise_and(frame, frame, mask=mask)
+
+    cv.imshow("frame", frame)
+    cv.imshow("mask", mask)
+    cv.imshow("res", res)
+
+    key = cv.waitKey(1)
+    if key == 27:
+        break
+
+cv.destroyAllWindows()
 ```
 
 ---
